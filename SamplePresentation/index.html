@@ -32,7 +32,7 @@
         For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
       </p>
     </div>
-    <asq-settings maxNumSubmissions="0" slideflow="ghost" assessment="auto"></asq-settings>
+    <asq-settings maxNumSubmissions="2" slideflow="ghost" assessment="auto"></asq-settings>
     <div id="impress">
 
       <section class="step" id="slide01" data-x="0" data-y="0">
@@ -43,7 +43,7 @@
       </section>
 
        <section class="step" id="slide02" data-x="1500" data-y="0" data-z="1000">
-        <asq-exercise> 
+        <asq-exercise maxNumSubmissions="9"> 
           <asq-stem><h2>&lt;asq-multi-choice-q&gt; question</h2></asq-stem>
           <asq-multi-choice-q selected="op3">
             <asq-stem><h3>Here you can pick just one answer:</h3></asq-stem>
@@ -56,8 +56,7 @@
       </section>
 
       <section class="step" id="slide03" data-x="3000" data-y="0" data-z="1000">
-        <asq-exercise> 
-          <asq-stem><h2>&lt;asq-text-input-q&gt; question</h2></asq-stem>
+        <asq-exercise maxNumSubmissions="-1">
           <asq-text-input-q label="value">
             <asq-stem><h5>What's value of a[3]?</h5></asq-stem>
             <pre><code>
@@ -66,15 +65,15 @@
               strcpy(a, b);</code></pre>
             <asq-solution hidden>\0</asq-solution>
           </asq-text-input-q>
-        </asq-exercise>
-      </section> 
+       </asq-exercise>
+      </section>
 
       <section class="step" id="slide04" data-x="4500" data-y="0" data-z="1000">
-        <asq-exercise>
+        <asq-exercise maxNumSubmissions="9">
           <asq-css-select-q htmlcode="<ul><li class='aclass'><ul id='aid'><li></li><li></li></ul></li><div><p></p><p class='bclass'></p></div></li></ul>">
             <asq-stem><h3>Select 'div' elements:</h3></asq-stem>
           </asq-css-select-q>
-        </asq-exercise>
+       </asq-exercise>
       </section>
 
       <section class="step" id="slide05" data-x="6000" data-y="0" data-z="1000">
@@ -82,11 +81,11 @@
           <asq-js-function-body-q functionName="wrap(str, tagName)" question="wrap('hello World', 'div');">
             <asq-stem><h4>Implement a function that wraps a given string with an HTML tag:</h4></asq-stem>
           </asq-js-function-body-q>
-        </asq-exercise>
-      </section> 
+       </asq-exercise>
+      </section>
 
       <section class="step" id="slide06" data-x="7500" data-y="0" data-z="1000">
-        <asq-exercise maxNumSubmissions="123" confidence="true">
+        <asq-exercise>
           <asq-buckets-q targets="#targets" objects="#objects">
             <asq-stem><h5>Please classify the words according to the pronunciation of the bolded vowels</h5></asq-stem>
             <div id="targets">
@@ -101,13 +100,14 @@
               <div object name="vier">v<b>i</b>er</div>
             </div>
           </asq-buckets-q>
-        </asq-exercise>
-      </section> 
+       </asq-exercise>
+      </section>
+
 
       <section class="step" id="slide07" data-x="9000" data-y="0" data-z="1000">
-        <asq-exercise maxNumSubmissions="3" confidence="true">
+        <asq-exercise>
           <asq-order-q objects="#objects" vertical layout
-          hints solution='{und} {kalt} {es ist} {schneit}' >
+            hints solution='{und} {kalt} {es ist} {schneit}' >
             <asq-stem><p>It is snowing and it is cold.</p></asq-stem>
             <img src="http://www.its.caltech.edu/~atomic/snowcrystals/photos/w031230a113.jpg"></img>  
 
@@ -119,11 +119,13 @@
               <div object name="es ist">es ist</div>
             </div>
           </asq-order-q>
-        </asq-exercise>
+       </asq-exercise>
       </section>
 
+
       
-        
+
+       
  
 
     </div>
