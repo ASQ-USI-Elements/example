@@ -1,11 +1,11 @@
 {
   "name": "sample-presentation",
   "private": "true",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "authors": [
-    "ZhenfeiNie <zhenfei.nie@gmail.com>"
+    "Vassilis Triglianos <triglian@gmail.com>"
   ],
-  "description": "asq-elements",
+  "description": "Rapid-Mashup-Challenge-2015 presentation",
   "main": "app.js",
   "keywords": [
     "asq",
@@ -21,9 +21,9 @@
     "tests"
   ],
   "dependencies": {
-    "asq-elements": "ASQ-USI/asq-elements#master",
-    "asq-mashup-challenge-scoreboard": "ASQ-USI/asq-mashup-challenge-scoreboard#master",
-    "webcomponentsjs": "~0.6.1",
+    "asq-elements": "ASQ-USI-Elements/asq-elements#master",
+    "asq-mashup-challenge-scoreboard": "ASQ-USI-Elements/asq-mashup-challenge-scoreboard#master",
+    "webcomponentsjs": "~0.6.1"
     "FlipClock": "~0.7.7"
   }
 }

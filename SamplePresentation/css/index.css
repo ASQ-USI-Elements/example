@@ -1,4 +1,4 @@
-asq-order [target] {
+asq-order-q [target] {
   min-height: 45px;
   padding: 4px;
   margin-bottom: 20px;
@@ -13,14 +13,14 @@ asq-order [target] {
 }
 
 
-asq-order [target] > [object] {
+asq-order-q [target] > [object] {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 2px;
 }
 
-asq-order [object] {
+asq-order-q [object] {
   cursor: pointer;
   display: block;
   color: #a94442;
@@ -40,7 +40,7 @@ asq-order[disabled] [object] {
   background-color: #666666;
 }
 
-asq-order img {
+asq-order-q img {
   max-height: 350px;
   margin: 1em;
 
@@ -54,7 +54,7 @@ asq-order img {
 }
 
 /*  */
-asq-buckets [target] {
+asq-buckets-q [target] {
 
   padding: 4px;
   margin-bottom: 20px;
@@ -67,13 +67,13 @@ asq-buckets [target] {
           transition: border .2s ease-in-out;
 
 }
-asq-buckets #targets {
+asq-buckets-q #targets {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-asq-buckets [target] {
+asq-buckets-q [target] {
   cursor: pointer;
   display: block;
   
@@ -83,7 +83,7 @@ asq-buckets [target] {
 }
 
 
-asq-buckets [target] [object] {
+asq-buckets-q [target] [object] {
   cursor: default;
   display: flex;
   flex-direction: row;
@@ -92,11 +92,11 @@ asq-buckets [target] [object] {
   width: 100%;
 }
 
-asq-buckets [target] [change] {
+asq-buckets-q [target] [change] {
   background-color: #FF6666;
 }
 
-asq-buckets [target] > span {
+asq-buckets-q [target] > span {
   color: #E6E6E6;
   background-color: #0080FF;
   border-color: #bce8f1;
@@ -109,16 +109,16 @@ asq-buckets [target] > span {
 
 }
 
-asq-buckets[disabled] [target] > span {
+asq-buckets-q[disabled] [target] > span {
   background-color: #4C4C4C;
 }
 
-asq-buckets[disabled] [target] {
+asq-buckets-q[disabled] [target] {
   cursor: auto;
   background-color: lightgray;
 }
 
-asq-buckets [object] {
+asq-buckets-q [object] {
   display: block;
   color: #a94442;
   background-color: #f2dede;
@@ -132,17 +132,17 @@ asq-buckets [object] {
   margin: 1px auto;
 }
 
-asq-buckets[disabled] [object] {
+asq-buckets-q[disabled] [object] {
   color: white;
   background-color: #808080;
 }
 
-asq-buckets[disabled]::shadow [object] {
+asq-buckets-q[disabled]::shadow [object] {
   color: white;
   background-color: #808080;
 }
 
-asq-buckets::shadow [object] {
+asq-buckets-q::shadow [object] {
   display: block;
   color: #a94442;
   background-color: #f2dede;
@@ -156,28 +156,28 @@ asq-buckets::shadow [object] {
   margin: 1px auto;
 }
 
-asq-buckets [object] > b {
+asq-buckets-q [object] > b {
   color: red;
 }
 
-asq-buckets::shadow [object] > b {
+asq-buckets-q::shadow [object] > b {
   color: red;
 }
 
-asq-buckets[disabled] [object] > b {
+asq-buckets-q[disabled] [object] > b {
   color: #333333;
 }
 
-asq-buckets[disabled]::shadow [object] > b {
+asq-buckets-q[disabled]::shadow [object] > b {
   color: #333333;
 }
 
 
-asq-buckets core-icon {
+asq-buckets-q core-icon {
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
 }
 
-asq-buckets core-icon:hover {
+asq-buckets-q core-icon:hover {
   fill: #fb8c00;
 }
