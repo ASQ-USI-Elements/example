@@ -1,0 +1,33 @@
+{
+  "name": "USI-Web-Atelier-Skeleton",
+  "private": "true",
+  "version": "0.1.0",
+  "authors": [
+    "Cesare Pautasso",
+    "Vasileios Triglianos"
+  ],
+  "description": "asq-elements",
+  "main": "index.html",
+  "keywords": [
+    "USI",
+    "Web Atelier",
+    "ASQ",
+    "Web Components"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "asq-elements": "ASQ-USI-Elements/asq-elements#master",
+    "asq-impress-js": "ASQ-USI/impress.js#master",
+    "svg-injector": "~1.1.3",
+    "usi-web-atelier-slides-common": "ASQ-USI-Elements/usi-web-atelier-slides-common#master",
+    "webcomponentsjs": "~0.5.2"
+  }
+}
