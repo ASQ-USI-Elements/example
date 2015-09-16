@@ -1,3 +1,11 @@
+asq-highlight-q{
+  min-height: 500px;
+}
+
+asq-code-q{
+  height: 400px;
+}
+
 asq-order-q [target] {
   min-height: 45px;
   padding: 4px;
