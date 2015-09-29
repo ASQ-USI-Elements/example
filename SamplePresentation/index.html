@@ -24,10 +24,13 @@
       window.Polymer.dom = 'shadow';
     </script>
     <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+    <link rel="import" href="bower_components/asq-canvas/asq-canvas.html">
     
   </head>
 
   <body class="impress-not-supported" data-asq-role="viewer">
+
+    <asq-canvas></asq-canvas>
 
     <div class="fallback-message">
       <p>
@@ -75,7 +78,7 @@
 
       <section class="step" id="slide04" data-x="4500" data-y="0" data-z="2000">
            <asq-text-input-q-stats for="text-q">
-           <h5>Submissions</h5>
+           <h3>This page shows stats for the previous &lt;asq-text-input-q&gt; question</h3>
            </asq-text-input-q-stats>
        </section>
 
@@ -162,6 +165,11 @@
 }</code>
             </asq-highlight-q>
        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide10" data-x="13500" data-y="0" data-z="1000">
+        <h3>This presentation has an &lt;asq-canvas&gt; element</h3>
+        <p>This element allows the presenter to start drawing by pressing `c` and then using their mouse. The drawing is then shared with the viewers.</p>
       </section>
 
     </div>
