@@ -25,6 +25,45 @@
     </script>
     <link rel="import" href="bower_components/asq-elements/asq-elements.html">
     
+    <style>
+      body{
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+
+      asq-option {
+        display: block;
+      }
+
+      .asq-selected {
+        background-color: #CFD8DC;
+      }
+
+      asq-multi-choice-q {
+        pointer-events: auto;
+      }
+
+      asq-option {
+        pointer-events: auto;
+      }
+    </style>
+
+    <style is="custom-style">
+      asq-multi-choice-q > asq-option {
+        --asq-option-unchecked-ink-color: #FF1744;
+        --asq-option-checked-ink-color: #2E7D32;
+        --asq-option-checked-color: red;
+        --asq-option-unchecked-background-color: #D7CCC8;
+      }
+
+      asq-multi-choice-q[multi] > asq-option {
+        --asq-option-unchecked-ink-color: #FF1744;
+        --asq-option-checked-ink-color: #2E7D32;
+        --asq-option-checked-color: black;
+        --asq-option-unchecked-background-color: white;
+      }
+
+    </style>
+
   </head>
 
   <body class="impress-not-supported" data-asq-role="viewer">
@@ -48,120 +87,16 @@
       </section>
 
        <section class="step" id="slide02" data-x="1500" data-y="0" data-z="1000">
-        <asq-exercise max-num-submissions="1" assessment="self"> 
-          <asq-stem><h2>&lt;asq-multi-choice-q&gt; question</h2></asq-stem>
-          <asq-multi-choice-q selected="op3">
-            <asq-stem><h3>Here you can pick just one answer:</h3></asq-stem>
-            <asq-option name="op0">Option 0</asq-option>
-            <asq-option name="op1">Option 1</asq-option>
-            <asq-option name="op2">Option 2</asq-option>
-            <asq-option name="op3">Option 3</asq-option>
+        <asq-exercise max-num-submissions="2"> 
+          <asq-stem><h5>Choose the programming languages you've learned.</h5></asq-stem>
+          <asq-multi-choice-q multi>
+            <asq-option name="Java">Java</asq-option>
+            <asq-option name="Haskell">Haskell</asq-option>
+            <asq-option name="Lisp">Lisp</asq-option>
+            <asq-option name="JavaScript">JavaScript</asq-option>
+            <asq-option name="C++">C++</asq-option>
           </asq-multi-choice-q>
         </asq-exercise>
-      </section>
-
-     <section class="step" id="slide03" data-x="3000" data-y="0" data-z="1000">
-        <asq-exercise max-num-submissions="8">
-          <asq-text-input-q label="value" id="text-q">
-            <asq-stem><h5>What's value of a[3]?</h5></asq-stem>
-            <pre><code>
-              char a[27];
-              char *b = "abc";
-              strcpy(a, b);</code></pre>
-            <asq-solution hidden>\0</asq-solution>
-          </asq-text-input-q>
-       </asq-exercise>
-      </section>
-
-      <section class="step" id="slide04" data-x="4500" data-y="0" data-z="2000">
-           <asq-text-input-q-stats for="text-q">
-           <h5>Submissions</h5>
-           </asq-text-input-q-stats>
-       </section>
-
-      <!--  <section class="step" id="slide04" data-x="4500" data-y="0" data-z="1000">
-        <asq-exercise max-num-submissions="9">
-          <asq-css-select-q htmlcode="<ul><li class='aclass'><ul id='aid'><li></li><li></li></ul></li><div><p></p><p class='bclass'></p></div></li></ul>">
-            <asq-stem><h3>Select 'div' elements:</h3></asq-stem>
-          </asq-css-select-q>
-       </asq-exercise>
-      </section> -->
-
-      <section class="step" id="slide05" data-x="6000" data-y="0" data-z="1000">
-        <asq-exercise>
-          <asq-js-function-body-q function-name="wrap(str, tagName)" test-exp="wrap('hello World', 'div');">
-            <asq-stem><h4>Implement a function that wraps a given string with an HTML tag:</h4></asq-stem>
-          </asq-js-function-body-q>
-       </asq-exercise>
-      </section> 
-
-<!--       <section class="step" id="slide06" data-x="7500" data-y="0" data-z="1000">
-        <asq-exercise>
-          <asq-buckets-q targets="#targets" objects="#objects">
-            <asq-stem><h5>Please classify the words according to the pronunciation of the bolded vowels</h5></asq-stem>
-            <div id="targets">
-              <div target name="Long"><span>Long</span></div>
-              <div target name="Short"><span>Short</span></div>
-              <div target name="Medium"><span>Medium</span></div>
-            </div>
-            <div id="objects">
-              <div object name="glas">Gl<b>a</b>s</div>
-              <div object name="nudeln">N<b>u</b>deln</div>
-              <div object name="platz">Pl<b>a</b>tz</div>
-              <div object name="vier">v<b>i</b>er</div>
-            </div>
-          </asq-buckets-q>
-       </asq-exercise>
-      </section>
-
-
-      <section class="step" id="slide07" data-x="9000" data-y="0" data-z="1000">
-        <asq-exercise>
-          <asq-order-q objects="#objects" vertical layout
-            hints solution='{und} {kalt} {es ist} {schneit}' >
-            <asq-stem><p>It is snowing and it is cold.</p></asq-stem>
-            <img src="http://www.its.caltech.edu/~atomic/snowcrystals/photos/w031230a113.jpg"></img>  
-
-            <div target name="words" horizontal layout></div>
-            <div id="objects" horizontal layout>
-              <div object name="schneit">schneit</div>
-              <div object name="und">und</div>
-              <div object name="kalt">kalt</div>
-              <div object name="es ist">es ist</div>
-            </div>
-          </asq-order-q>
-       </asq-exercise>
-      </section>
- -->
-
-       <section class="step" id="slide08" data-x="10500" data-y="0" data-z="1000">
-         <asq-exercise max-num-submissions="3" assessment="self">
-             <asq-code-q  theme="monokai" mode="javascript" font-size="0.8em">
-               <asq-stem><h3>Write a imple for loop in JavaScript </h3></asq-stem>
-<code>public class C {      
-  public void m() {
-    int i = i + 5 + ((int)5.0) + ((int)5f);
-  }
-}</code>
-             </asq-code-q>
-        </asq-exercise>
-       </section>
-      
-      <section class="step" id="slide09" data-x="12000" data-y="0" data-z="1000">
-        <asq-exercise max-num-submissions="-1">
-            <asq-highlight-q  theme="textmate" mode="java" font-size="0.65em">
-            <asq-solution>{"d9534f":[{"start":{"row":1,"column":2},"end":{"row":1,"column":8},"id":216},{"start":{"row":0,"column":0},"end":{"row":0,"column":6},"id":222}],"428bca":[{"start":{"row":2,"column":4},"end":{"row":2,"column":7},"id":229}],"f0ad4e":[{"start":{"row":0,"column":7},"end":{"row":0,"column":12},"id":236},{"start":{"row":1,"column":9},"end":{"row":1,"column":13},"id":243},{"start":{"row":2,"column":22},"end":{"row":2,"column":25},"id":250},{"start":{"row":2,"column":35},"end":{"row":2,"column":38},"id":256}]}</asq-solution>
-              <asq-stem><h3>Highlight with the appropriate color the following:</h3></asq-stem>
-              <asq-hl-color-task color="d9534f">Visibility Modifiers</asq-hl-color-task>
-                <asq-hl-color-task color="428bca">Variable Declarations</asq-hl-color-task>
-                <asq-hl-color-task color="f0ad4e">Other keywords</asq-hl-color-task>
-    <code>public class C {      
-  public void m() {
-    int i = i + 5 + ((int)5.0) + ((int)5f);
-  }
-}</code>
-            </asq-highlight-q>
-       </asq-exercise>
       </section>
 
     </div>
