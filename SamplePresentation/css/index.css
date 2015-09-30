@@ -12,6 +12,10 @@ asq-highlight-q{
   min-height: 500px;
 }
 
+asq-fiddle-q{
+  height: 700px;
+}
+
 asq-code-q{
   height: 400px;
 }

@@ -23,8 +23,10 @@
       window.Polymer = window.Polymer || {};
       window.Polymer.dom = 'shadow';
     </script>
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="bower_components/asq-elements/asq-elements.html">
     <link rel="import" href="bower_components/asq-canvas/asq-canvas.html">
+    <link rel="import" href="fullscreen-impress-steps.html">
     
   </head>
 
@@ -43,14 +45,14 @@
     <asq-settings max-num-submissions="2" slideflow="ctrl" assessment="none"></asq-settings>
     <div id="impress">
 
-      <section class="step" id="slide01" data-x="0" data-y="0">
+      <section class="step" id="intro" data-x="0" data-y="0">
         <h1>This is a sample ASQ presentation</h1>
         <h3>Here goes a subheadline</h3>
         <hr />
         <asq-welcome></asq-welcome>
       </section>
 
-       <section class="step" id="slide02" data-x="1500" data-y="0" data-z="1000">
+       <section class="step" id="asq-multi-choice-q" data-x="1500" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="1" assessment="self"> 
           <asq-stem><h2>&lt;asq-multi-choice-q&gt; question</h2></asq-stem>
           <asq-multi-choice-q selected="op3">
@@ -63,7 +65,7 @@
         </asq-exercise>
       </section>
 
-     <section class="step" id="slide03" data-x="3000" data-y="0" data-z="1000">
+     <section class="step" id="asq-text-input-q" data-x="3000" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="8">
           <asq-text-input-q label="value" id="text-q">
             <asq-stem><h5>What's value of a[3]?</h5></asq-stem>
@@ -76,21 +78,21 @@
        </asq-exercise>
       </section>
 
-      <section class="step" id="slide04" data-x="4500" data-y="0" data-z="2000">
+      <section class="step" id="asq-text-input-q-stats" data-x="4500" data-y="0" data-z="2000">
            <asq-text-input-q-stats for="text-q">
            <h3>This page shows stats for the previous &lt;asq-text-input-q&gt; question</h3>
            </asq-text-input-q-stats>
        </section>
 
-      <!--  <section class="step" id="slide04" data-x="4500" data-y="0" data-z="1000">
+       <section class="step" id="asq-css-select-q" data-x="6000" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="9">
           <asq-css-select-q htmlcode="<ul><li class='aclass'><ul id='aid'><li></li><li></li></ul></li><div><p></p><p class='bclass'></p></div></li></ul>">
-            <asq-stem><h3>Select 'div' elements:</h3></asq-stem>
+            <asq-stem><h3>Select all 'li' elements:</h3></asq-stem>
           </asq-css-select-q>
        </asq-exercise>
-      </section> -->
+      </section>
 
-      <section class="step" id="slide05" data-x="6000" data-y="0" data-z="1000">
+      <section class="step" id="asq-js-function-body" data-x="7500" data-y="0" data-z="1000">
         <asq-exercise>
           <asq-js-function-body-q function-name="wrap(str, tagName)" test-exp="wrap('hello World', 'div');">
             <asq-stem><h4>Implement a function that wraps a given string with an HTML tag:</h4></asq-stem>
@@ -98,7 +100,7 @@
        </asq-exercise>
       </section> 
 
-<!--       <section class="step" id="slide06" data-x="7500" data-y="0" data-z="1000">
+<!--       <section class="step" id="asq-buckets-q" data-x="7500" data-y="0" data-z="1000">
         <asq-exercise>
           <asq-buckets-q targets="#targets" objects="#objects">
             <asq-stem><h5>Please classify the words according to the pronunciation of the bolded vowels</h5></asq-stem>
@@ -118,7 +120,7 @@
       </section>
 
 
-      <section class="step" id="slide07" data-x="9000" data-y="0" data-z="1000">
+      <section class="step" id="asq-order-q" data-x="9000" data-y="0" data-z="1000">
         <asq-exercise>
           <asq-order-q objects="#objects" vertical layout
             hints solution='{und} {kalt} {es ist} {schneit}' >
@@ -137,7 +139,7 @@
       </section>
  -->
 
-       <section class="step" id="slide08" data-x="10500" data-y="0" data-z="1000">
+       <section class="step" id="asq-code-q" data-x="10500" data-y="0" data-z="1000">
          <asq-exercise max-num-submissions="3" assessment="self">
              <asq-code-q  theme="monokai" mode="javascript" font-size="0.8em">
                <asq-stem><h3>Write a imple for loop in JavaScript </h3></asq-stem>
@@ -150,7 +152,7 @@
         </asq-exercise>
        </section>
       
-      <section class="step" id="slide09" data-x="12000" data-y="0" data-z="1000">
+      <section class="step" id="asq-highlight-q" data-x="12000" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="-1">
             <asq-highlight-q  theme="textmate" mode="java" font-size="0.65em">
             <asq-solution>{"d9534f":[{"start":{"row":1,"column":2},"end":{"row":1,"column":8},"id":216},{"start":{"row":0,"column":0},"end":{"row":0,"column":6},"id":222}],"428bca":[{"start":{"row":2,"column":4},"end":{"row":2,"column":7},"id":229}],"f0ad4e":[{"start":{"row":0,"column":7},"end":{"row":0,"column":12},"id":236},{"start":{"row":1,"column":9},"end":{"row":1,"column":13},"id":243},{"start":{"row":2,"column":22},"end":{"row":2,"column":25},"id":250},{"start":{"row":2,"column":35},"end":{"row":2,"column":38},"id":256}]}</asq-solution>
@@ -167,7 +169,18 @@
        </asq-exercise>
       </section>
 
-      <section class="step" id="slide10" data-x="13500" data-y="0" data-z="1000">
+      <section class="step fullscreen" id="asq-fiddle-q" data-x="13500" data-y="0" data-z="1000">
+        <asq-exercise max-num-submissions="-1">
+          <asq-fiddle-q>
+            <asq-stem>
+              <h4>Try to recreate the following image using HTML5 and CSS</h4>
+            <asq-stem>
+            <img src="img/mockup.png" width="200px" alt="">
+          </asq-fiddle-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="asq-canvas" data-x="15000" data-y="0" data-z="1000">
         <h3>This presentation has an &lt;asq-canvas&gt; element</h3>
         <p>This element allows the presenter to start drawing by pressing `c` and then using their mouse. The drawing is then shared with the viewers.</p>
       </section>
@@ -192,6 +205,8 @@
     </script>
 		<script src="js/jquery.js"></script>
     <script src="js/impress.js"></script>
+
+
   </body>
 </html>
 
