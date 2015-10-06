@@ -27,6 +27,8 @@
     <link rel="import" href="bower_components/asq-elements/asq-elements.html">
     <link rel="import" href="bower_components/asq-canvas/asq-canvas.html">
     <link rel="import" href="n-fullscreen-impress-steps.html">
+
+    <link rel="import" href="css/buckets-style.html">
     
   </head>
 
@@ -93,33 +95,44 @@
       </section>
 
       <section class="step" id="asq-js-function-body" data-x="7500" data-y="0" data-z="1000">
-        <asq-exercise>
+        <asq-exercise max-num-submissions="1">
           <asq-js-function-body-q function-name="wrap(str, tagName)" test-exp="wrap('hello World', 'div');">
             <asq-stem><h4>Implement a function that wraps a given string with an HTML tag:</h4></asq-stem>
           </asq-js-function-body-q>
        </asq-exercise>
       </section> 
 
-<!--       <section class="step" id="asq-buckets-q" data-x="7500" data-y="0" data-z="1000">
-        <asq-exercise>
-          <asq-buckets-q targets="#targets" objects="#objects">
-            <asq-stem><h5>Please classify the words according to the pronunciation of the bolded vowels</h5></asq-stem>
-            <div id="targets">
-              <div target name="Long"><span>Long</span></div>
-              <div target name="Short"><span>Short</span></div>
-              <div target name="Medium"><span>Medium</span></div>
+    <section class="step" id="asq-buckets-q" data-x="9000" data-y="0" data-z="1000">
+      <asq-exercise class="container">
+        <h4>Drag the labels (name of cites) to match the buckets.</h4>
+        <asq-buckets-q role="viewer"
+          mode="1-3" 
+          x-matchable="div[bucket]" 
+          y-matchable="div[label]" 
+          attr-for-matched="s-name"
+          matched-attribute="matched"
+          label-container="[labels]"
+          matched-class="label-success">
+
+            <div buckets>
+              <div s-name="Europe" bucket><b>Europe</b></div>
+              <div s-name="North America" bucket><b>North America</b></div>
+              <div s-name="Middle East" bucket><b>Middle East</b></div>
             </div>
-            <div id="objects">
-              <div object name="glas">Gl<b>a</b>s</div>
-              <div object name="nudeln">N<b>u</b>deln</div>
-              <div object name="platz">Pl<b>a</b>tz</div>
-              <div object name="vier">v<b>i</b>er</div>
+            
+            <div labels>
+              <div s-name="New York" label class="label-primary">New York</div>
+              <div s-name="London" label class="label-primary">London</div>
+              <div s-name="Zurich" label class="label-primary">Zurich</div>
+              <div s-name="Jerusalem" label class="label-primary">Jerusalem</div>
+              <div s-name="Chicago" label class="label-primary">Chicago</div>
+              <div s-name="Lugano" label class="label-primary">Lugano</div>
             </div>
           </asq-buckets-q>
-       </asq-exercise>
+        </asq-exercise>
       </section>
 
-
+<!-- 
       <section class="step" id="asq-order-q" data-x="9000" data-y="0" data-z="1000">
         <asq-exercise>
           <asq-order-q objects="#objects" vertical layout
@@ -136,8 +149,8 @@
             </div>
           </asq-order-q>
        </asq-exercise>
-      </section>
- -->
+      </section> -->
+
 
        <section class="step" id="asq-code-q" data-x="10500" data-y="0" data-z="1000">
          <asq-exercise max-num-submissions="3" assessment="self">
