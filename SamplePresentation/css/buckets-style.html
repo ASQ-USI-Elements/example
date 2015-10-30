@@ -5,13 +5,13 @@
   @apply(--layout-wrap);
 }
 
-div[buckets] {
+asq-buckets-q > div[buckets] {
   @apply(--layout-horizontal);
   @apply(--layout-center-justified);
   @apply(--layout-wrap);
 }
 
-div[bucket] {
+asq-buckets-q > div[bucket] {
   @apply(--layout-vertical);
   min-width: 200px;
   min-height: 200px;
@@ -23,12 +23,12 @@ div[bucket] {
   border-radius: 5px;
 }
 
-div[bucket].over {
+asq-buckets-q > div[bucket].over {
   border: 1px dashed #000;
   @apply(--shadow-elevation-3dp);
 }
 
-div[bucket] > b {
+asq-buckets-q > div[bucket] > b {
   background-color: #75B7BE;
   color: #E6E6E6;
   border-color: #405356;
@@ -45,14 +45,14 @@ div[bucket] > b {
 
 
 /*labels*/
-div[labels] {
+asq-buckets-q > div[labels] {
   @apply(--layout-horizontal);
   @apply(--layout-center-justified);
   @apply(--layout-wrap);
 }
 
 
-div[label] {
+asq-buckets-q > div[label] {
   padding: 6px 12px;
   margin-bottom: 0;
   font-size: 14px;
@@ -75,61 +75,61 @@ div[label] {
   margin: 1px;
 }
 
-div[label].dragging {
+asq-buckets-q > div[label].dragging {
   opacity: 0.6;
 }
 
 
 
-[label].label-primary {
+asq-buckets-q > [label].label-primary {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
 }
-[label].label-primary:focus,
-[label].label-primary.focus {
+asq-buckets-q > [label].label-primary:focus,
+asq-buckets-q > [label].label-primary.focus {
   color: #fff;
   background-color: #286090;
   border-color: #122b40;
 
 }
-[label].label-primary:hover {
+asq-buckets-q > [label].label-primary:hover {
   color: #fff;
   background-color: #286090;
   border-color: #204d74;
 }
 
-[label].label-success {
+asq-buckets-q > [label].label-success {
   color: #fff;
   background-color: #5cb85c;
   border-color: #4cae4c; 
 }
 
-[label].label-success:focus,
-[label].label-success.focus {
+asq-buckets-q > [label].label-success:focus,
+asq-buckets-q > [label].label-success.focus {
   color: #fff;
   background-color: #449d44;
   border-color: #255625;
 }
-[label].label-success:hover {
+asq-buckets-q > [label].label-success:hover {
   color: #fff;
   background-color: #449d44;
   border-color: #398439;
 }
 
-h4 {
+asq-buckets-q > h4 {
   margin: 10px auto;
 }
 
-div[label].asq-disabled {
+asq-buckets-q > div[label].asq-disabled {
   color: white;
   background-color: #4C4C4C;
   border-color: #4C4C4C;
   cursor: auto;
 }
 
-div[label].asq-disabled:hover,
-div[label].asq-disabled:focus  {
+asq-buckets-q > div[label].asq-disabled:hover,
+asq-buckets-q > div[label].asq-disabled:focus  {
   color: white;
   background-color: #4C4C4C;
   border-color: #4C4C4C;

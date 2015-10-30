@@ -29,6 +29,7 @@
     <link rel="import" href="n-fullscreen-impress-steps.html">
 
     <link rel="import" href="css/buckets-style.html">
+    <link rel="import" href="css/asq-order-style.html">
     
   </head>
 
@@ -132,27 +133,21 @@
         </asq-exercise>
       </section>
 
-<!-- 
-      <section class="step" id="asq-order-q" data-x="9000" data-y="0" data-z="1000">
-        <asq-exercise>
-          <asq-order-q objects="#objects" vertical layout
-            hints solution='{und} {kalt} {es ist} {schneit}' >
-            <asq-stem><p>It is snowing and it is cold.</p></asq-stem>
-            <img src="http://www.its.caltech.edu/~atomic/snowcrystals/photos/w031230a113.jpg"></img>  
 
-            <div target name="words" horizontal layout></div>
-            <div id="objects" horizontal layout>
-              <div object name="schneit">schneit</div>
-              <div object name="und">und</div>
-              <div object name="kalt">kalt</div>
-              <div object name="es ist">es ist</div>
-            </div>
+      <section class="step" id="asq-order-q" data-x="10500" data-y="0" data-z="1000">
+        <asq-exercise>
+          <asq-stem>Specify the order of Polymer lifecycle methods.</asq-stem>
+          <asq-order-q sortable="[label]" role="presenter">
+            <div label class="static" name="ready">ready</div>
+            <div label class="static" name="attached">attached</div>
+            <div label class="static" name="created">created</div>
+            <div label class="static" name="detached">detached</div>
           </asq-order-q>
        </asq-exercise>
-      </section> -->
+      </section>
 
 
-       <section class="step" id="asq-code-q" data-x="10500" data-y="0" data-z="1000">
+       <section class="step" id="asq-code-q" data-x="12000" data-y="0" data-z="1000">
          <asq-exercise max-num-submissions="3" assessment="self">
              <asq-code-q  theme="monokai" mode="javascript" font-size="0.8em">
                <asq-stem><h3>Write a simple for loop in JavaScript </h3></asq-stem>
@@ -165,7 +160,7 @@
         </asq-exercise>
        </section>
       
-      <section class="step" id="asq-highlight-q" data-x="12000" data-y="0" data-z="1000">
+      <section class="step" id="asq-highlight-q" data-x="13500" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="-1">
             <asq-highlight-q  theme="textmate" mode="java" font-size="0.65em">
             <asq-solution>{"d9534f":[{"start":{"row":1,"column":2},"end":{"row":1,"column":8},"id":216},{"start":{"row":0,"column":0},"end":{"row":0,"column":6},"id":222}],"428bca":[{"start":{"row":2,"column":4},"end":{"row":2,"column":7},"id":229}],"f0ad4e":[{"start":{"row":0,"column":7},"end":{"row":0,"column":12},"id":236},{"start":{"row":1,"column":9},"end":{"row":1,"column":13},"id":243},{"start":{"row":2,"column":22},"end":{"row":2,"column":25},"id":250},{"start":{"row":2,"column":35},"end":{"row":2,"column":38},"id":256}]}</asq-solution>
@@ -182,7 +177,7 @@
        </asq-exercise>
       </section>
 
-      <section class="step fullscreen" id="asq-fiddle-q" data-x="13500" data-y="0" data-z="1000">
+      <section class="step fullscreen" id="asq-fiddle-q" data-x="15000" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="-1">
           <asq-fiddle-q>
             <asq-stem>
