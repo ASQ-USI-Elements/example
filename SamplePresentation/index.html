@@ -105,32 +105,30 @@
 
     <section class="step" id="asq-buckets-q" data-x="9000" data-y="0" data-z="1000">
       <asq-exercise class="container">
-        <h4>Drag the labels (name of cites) to match the buckets.</h4>
+        <asq-stem><h4>Drag the labels (name of cites) to match the buckets.</h4></asq-stem>
         <asq-buckets-q role="viewer"
           mode="1-3" 
-          x-matchable="div[bucket]" 
-          y-matchable="div[label]" 
+          x-matchable="div[buckets]" 
+          y-matchable="div[labels]" 
           attr-for-matched="s-name"
           matched-attribute="matched"
-          label-container="[labels]"
           matched-class="label-success">
 
-            <div buckets>
-              <div s-name="Europe" bucket><b>Europe</b></div>
-              <div s-name="North America" bucket><b>North America</b></div>
-              <div s-name="Middle East" bucket><b>Middle East</b></div>
-            </div>
-            
-            <div labels>
-              <div s-name="New York" label class="label-primary">New York</div>
-              <div s-name="London" label class="label-primary">London</div>
-              <div s-name="Zurich" label class="label-primary">Zurich</div>
-              <div s-name="Jerusalem" label class="label-primary">Jerusalem</div>
-              <div s-name="Chicago" label class="label-primary">Chicago</div>
-              <div s-name="Lugano" label class="label-primary">Lugano</div>
-            </div>
-          </asq-buckets-q>
-        </asq-exercise>
+          <div buckets>
+            <div s-name="Europe" class="bucket"><b>Europe</b></div>
+            <div s-name="North America" class="bucket"><b>North America</b></div>
+            <div s-name="Middle East" class="bucket"><b>Middle East</b></div>
+          </div>
+          
+          <div labels>
+            <div s-name="New York"  class="label label-primary">New York</div>
+            <div s-name="London"  class="label label-primary">London</div>
+            <div s-name="Zurich"  class="label label-primary">Zurich</div>
+            <div s-name="Jerusalem"  class="label label-primary">Jerusalem</div>
+            <div s-name="Chicago"  class="label label-primary">Chicago</div>
+            <div s-name="Lugano"  class="label label-primary">Lugano</div>
+          </div>
+        </asq-buckets-q>
       </section>
 
 
