@@ -12,9 +12,7 @@
 
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
 
-    <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    
+    <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>    
 
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> 
     <!-- Use shadow dom -->
@@ -195,7 +193,29 @@
         </asq-exercise>
       </section>
 
-      <section class="step" id="asq-canvas" data-x="15000" data-y="0" data-z="1000">
+      <section class="step" id="asq-sqlite-q" data-x="16500" data-y="0" data-z="1000">
+        <asq-exercise max-num-submissions="-1">
+            <asq-sqlite-q db-url="assets/Chinook_Sqlite.sqlite" font-size="0.6em">
+              <asq-stem><h4>INSERT some valid data in the TABLE `Employee`</h4></asq-stem>
+              <code></code>
+              <asq-solution>INSERT INTO `Employee` VALUES ()</asq-solution>
+            </asq-sqlite-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="asq-rating-q" data-x="18000" data-y="0" data-z="1000">
+         <asq-exercise max-num-submissions="-1">
+          <asq-rating-q type="stars">
+            <asq-stem><h4>An asq-rating-q question.</h4></asq-stem>
+            <asq-rating-item name="item-1">Item to rate #1</asq-rating-item>
+            <asq-rating-item name="item-2">Item to rate #2</asq-rating-item>
+            <asq-rating-item name="item-3">Item to rate #3</asq-rating-item>
+            <asq-rating-item name="item-4">Item to rate #4</asq-rating-item>
+          </asq-rating-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="asq-canvas" data-x="19500" data-y="0" data-z="1000">
         <h3>This presentation has an &lt;asq-canvas&gt; element</h3>
         <p>This element allows the presenter to start drawing by pressing `c` and then using their mouse. The drawing is then shared with the viewers.</p>
       </section>
