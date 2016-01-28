@@ -1,114 +1,291 @@
 <!doctype html>
 
 <html lang="en" style="height: 100%;">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="description" content="Web Atelier Presentation skeleton">
-    <meta name="author" content="Cesare Pautasso">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="Web Atelier Presentation skeleton">
+  <meta name="author" content="Cesare Pautasso">
 
-    <title>Introduction</title>
+  <title>Introduction</title>
 
-    <link rel="shortcut icon" href="bower_components/usi-web-atelier-slides-common/img/favicon.ico">
-    <link rel="icon" href="bower_components/usi-web-atelier-slides-common/img/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="bower_components/usi-web-atelier-slides-common/img/touch-icon-iphone.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="bower_components/usi-web-atelier-slides-common/img/touch-icon-ipad.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bower_components/usi-web-atelier-slides-common/img/apple-touch-icon-114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bower_components/usi-web-atelier-slides-common/img/apple-touch-icon-144-precomposed.png" />
-    
-	  <link href="css/style.css" rel="stylesheet">
-    <link href="bower_components/usi-web-atelier-slides-common/css/font.css" rel="stylesheet">
-    <link href="bower_components/usi-web-atelier-slides-common/css/default.css" rel="stylesheet">
-      <link href="bower_components/usi-web-atelier-slides-common/css/sunburst.css" rel="stylesheet">
+  <link rel="shortcut icon" href="bower_components/usi-web-atelier-slides-common/img/favicon.ico">
+  <link rel="icon" href="bower_components/usi-web-atelier-slides-common/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="bower_components/usi-web-atelier-slides-common/img/touch-icon-iphone.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="bower_components/usi-web-atelier-slides-common/img/touch-icon-ipad.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bower_components/usi-web-atelier-slides-common/img/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bower_components/usi-web-atelier-slides-common/img/apple-touch-icon-144-precomposed.png" />
 
-    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script> 
-    <link rel="import" href="bower_components/asq-elements/asq-elements.html">
-  </head>
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> 
+    <!-- Use shadow dom -->
+    <script>
+      window.Polymer = window.Polymer || {};
+      window.Polymer.dom = 'shadow';
+    </script>
 
-  <body class="impress-not-supported">
-    <div id="canvas"></div>
-    <div class="fallback-message">
-        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+  <link rel="import" href="bower_components/polymer/polymer.html"> 
+  <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html"> 
+  <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+  <link rel="import" href="bower_components/asq-canvas/asq-canvas.html">
+
+  <link href="bower_components/usi-web-atelier-slides-common/css/font.css" rel="stylesheet">
+  <link href="bower_components/usi-web-atelier-slides-common/css/default.css" rel="stylesheet">
+  <link href="bower_components/usi-web-atelier-slides-common/css/sunburst.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <link rel="import" href="shared-styles.html">
+  <style is="custom-style" include="shared-styles"></style>
+</head>
+
+<body class="impress-not-supported">
+  <div id="canvas"></div>
+  <div class="fallback-message">
+      <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+      <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+  </div>
+
+  <div id="impress" data-transition-duration="500"><div><div>
+    <div id="title" class="step" data-x="1930" data-y="1055" data-scale="0.5" data-rotate="0">
+		  <img src="bower_components/usi-web-atelier-slides-common/img/logo_info_color_en.svg" class="svg"/>
+      <h1>Introduction</h1>
+      <h2>Web Atelier</h2>
+      <p style="text-align:center">
+      Prof. Cesare Pautasso<br>
+      <a href="http://www.pautasso.info/">http://www.pautasso.info</a><br>
+      cesare.pautasso@usi.ch<br>
+      <a href="http://twitter.com/pautasso">@pautasso</a></p>
     </div>
-
-    <div id="impress" data-transition-duration="500"><div><div>
-      <div id="title" class="step" data-x="1930" data-y="1055" data-scale="0.5" data-rotate="0">
-  		  <img src="bower_components/usi-web-atelier-slides-common/img/logo_info_color_en.svg" class="svg"/>
-        <h1>Introduction</h1>
-        <h2>Web Atelier</h2>
-        <p style="text-align:center">
-        Prof. Cesare Pautasso<br>
-        <a href="http://www.pautasso.info/">http://www.pautasso.info</a><br>
-        cesare.pautasso@usi.ch<br>
-        <a href="http://twitter.com/pautasso">@pautasso</a></p>
-      </div>
-      
-      <div id="web" class="step" data-x="960" data-y="300" data-scale="1" data-rotate="0">
-          <h1>Slide 1 with substeps</h1>
-          <ul>
-          	<li class="substep">substep 1</li>
-          	<li class="substep">substep 2</li>
-          	<li class="substep">substep 3</li>
-          </ul>
-      </div>
-      
-      <div id="web-os" class="step" data-x="1000" data-y="1000">
-        <h1>Some code</h1>
+    
+    <div id="web" class="step" data-x="960" data-y="300" data-scale="1" data-rotate="0">
+        <h1>Slide 1 with substeps</h1>
+        <ul>
+        	<li class="substep">substep 1</li>
+        	<li class="substep">substep 2</li>
+        	<li class="substep">substep 3</li>
+        </ul>
+    </div>
+    
+  <div id="web-os" class="step" data-x="1000" data-y="1000">
+    <h1>Some code</h1>
 <pre class="request"><code class="http">GET /faculty/pautasso/ HTTP/1.1
 Host: www.inf.unisi.ch
 If-Modified-Since: Sun, 16 Sep 2007 21:50:53 GMT
 If-None-Match: "e7198-7030-ae960940" 
 Cache-Control: max-age=0</code></pre>
 <pre><code class="html">&lt;html&gt;
-  &lt;head&gt;
-    &lt;script&gt;
-      function start() { 
-        document.body.innerHTML = "Hello World";
-      }
-    &lt;/script&gt; 
-  &lt;/head&gt; 
-  &lt;body <b>onload</b>="start()"&gt;
-    ... 
-  &lt;/body&gt;
+&lt;head&gt;
+  &lt;script&gt;
+    function start() { 
+      document.body.innerHTML = "Hello World";
+    }
+  &lt;/script&gt; 
+&lt;/head&gt; 
+&lt;body <b>onload</b>="start()"&gt;
+  ... 
+&lt;/body&gt;
 &lt;/html&gt;</code></pre>
-      </div>
-      
-       
-      <div id="delicious" class="step" data-x="3500" data-y="1200" data-scale="0.4" data-rotate="0">
-    	   	<h2>Links</h2>
-    	   	<p><a href="http://www.delicious.com/cesare.pautasso/wa">http://www.delicious.com/cesare.pautasso/wa</a></p>
-    	   	<p>Subscribe to <a href="http://feeds.delicious.com/v2/rss/cesare.pautasso/wa">the Web Atelier feed <img src="bower_components/usi-web-atelier-slides-common/img/feed.svg" style="width:50px; vertical-align: center;"/></a></p>
-    	   	
-       </div>
-       
-       <div id="refs" class="step nobreak" data-x="3000" data-y="1750" data-scale="0.8" data-rotate="-45">
-       	<h2>References</h2>
-       	<ul class="small"><li>Tim Berners-Lee, Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web, Collins, Nov.2000</li>
-          <li>Robert W. Sebesta, Programming the World Wide Web, Addison-Wesley, 2005</li>
-          <li>IETF, HTTP/1.1 Standard, RFC2616, June 1999 <a href="http://www.ietf.org/rfc/rfc2616.txt">http://www.ietf.org/rfc/rfc2616.txt</a></li>
-          <li>George Gilder, <a href="http://www.wired.com/wired/archive/14.10/cloudware.html">The Information Factories</a>, Wired 14.10, October 2006 – on Cloudware</li>
-          <li>Jeffrey Zeldman, Designing With Web Standards, Peachpit Press, ISBN 0321385551 - <a href="http://www.zeldman.com/dwws/">http://www.zeldman.com/dwws/</a></li>
-          <li>The Evolution of the Web, <a href="http://www.evolutionoftheweb.com/">http://www.evolutionoftheweb.com/</a></li>
-        </ul>
-      </div>
-    	
-  	  <div id="overview" class="step" data-x="2000" data-y="1200" data-scale="4.5"></div>
-
-
-      <div class="hint">
-          <p>Use a spacebar or arrow keys to navigate</p>
-      </div>
+  </div>
     
-    </div>
-    
-    <script src="bower_components/svg-injector/dist/svg-injector.min.js"></script>
-    <script src="bower_components/asq-impress-js/js/impress.js"></script>
-    <script src="bower_components/usi-web-atelier-slides-common/js/highlight.min.js"></script>
-    <script src="bower_components/usi-web-atelier-slides-common/js/canvas.js"></script>
-    <script src="bower_components/usi-web-atelier-slides-common/js/main.js"></script>
+     
+  <div id="delicious" class="step" data-x="3500" data-y="1200" data-scale="0.4" data-rotate="0">
+	   	<h2>Links</h2>
+	   	<p><a href="http://www.delicious.com/cesare.pautasso/wa">http://www.delicious.com/cesare.pautasso/wa</a></p>
+	   	<p>Subscribe to <a href="http://feeds.delicious.com/v2/rss/cesare.pautasso/wa">the Web Atelier feed <img src="bower_components/usi-web-atelier-slides-common/img/feed.svg" style="width:50px; vertical-align: center;"/></a></p>
+   </div>
 
-    <div id="copyright">&copy;2014 Cesare Pautasso</div>
-  </body>
+  <section class="step" id="asq-multi-choice-q" data-x="2600" data-y="0" data-scale="0.4" data-z="1000">
+   <asq-exercise max-num-submissions="-1" assessment="self"> 
+     <asq-stem><h4>&lt;asq-multi-choice-q&gt; question</h4></asq-stem>
+     <asq-multi-choice-q selected="op3">
+       <asq-stem>Here you can pick just one answer:</asq-stem>
+       <asq-option name="op0">Option 0</asq-option>
+       <asq-option name="op1">Option 1</asq-option>
+       <asq-option name="op2">Option 2</asq-option>
+       <asq-option name="op3">Option 3</asq-option>
+     </asq-multi-choice-q>
+     <asq-multi-choice-q selected-values='["op1", "op2"]' multi>
+       <asq-stem>Here you can pick as many as you want</asq-stem>
+       <asq-option name="op0">Option 0</asq-option>
+       <asq-option name="op1">Option 1</asq-option>
+       <asq-option name="op2">Option 2</asq-option>
+       <asq-option name="op3">Option 3</asq-option>
+     </asq-multi-choice-q>
+   </asq-exercise>
+  </section>
+
+  <section class="step" id="asq-text-input-q" data-x="3200" data-y="0" data-scale="0.4" data-z="1000">
+   <asq-exercise max-num-submissions="8">
+     <asq-text-input-q label="value" id="text-q">
+       <asq-stem><h5>What's value of a[3]?</h5></asq-stem>
+       <pre><code>
+         char a[27];
+         char *b = "abc";
+         strcpy(a, b);</code></pre>
+       <asq-solution hidden>\0</asq-solution>
+     </asq-text-input-q>
+  </asq-exercise>
+  </section>
+
+  <section class="step" id="asq-text-input-q-stats" data-x="3800" data-y="0" data-scale="0.4" data-z="2000">
+      <asq-text-input-q-stats for="text-q">
+      <h3>This page shows stats for the previous &lt;asq-text-input-q&gt; question</h3>
+      </asq-text-input-q-stats>
+  </section>
+
+  <section class="step" id="asq-css-select-q" data-x="4400" data-y="0" data-scale="0.4" data-z="1000">
+   <asq-exercise max-num-submissions="9" class="small">
+     <asq-css-select-q htmlcode="<ul><li class='aclass'><ul id='aid'><li></li><li></li></ul></li><div><p></p><p class='bclass'></p></div></li></ul>">
+       <asq-stem><h3>Select all 'li' elements:</h3></asq-stem>
+     </asq-css-select-q>
+  </asq-exercise>
+  </section>
+
+  <section class="step" id="asq-js-function-body" data-x="5000" data-y="0" data-scale="0.4" data-z="1000">
+   <asq-exercise max-num-submissions="1">
+     <asq-js-function-body-q function-name="wrap(str, tagName)" test-exp="wrap('hello World', 'div');">
+       <asq-stem><h4>Implement a function that wraps a given string with an HTML tag:</h4></asq-stem>
+     </asq-js-function-body-q>
+  </asq-exercise>
+  </section> 
+
+  <section class="step" id="asq-buckets-q" data-x="5600" data-y="0" data-scale="0.4" data-z="1000">
+  <asq-exercise class="container">
+   <asq-stem><h4>Drag the labels (name of cites) to match the buckets.</h4></asq-stem>
+   <asq-buckets-q role="viewer"
+     mode="1-3" 
+     x-matchable="div[buckets]" 
+     y-matchable="div[labels]" 
+     attr-for-matched="s-name"
+     matched-attribute="matched"
+     matched-class="label-success">
+
+     <div buckets>
+       <div s-name="Europe" class="bucket"><b>Europe</b></div>
+       <div s-name="North America" class="bucket"><b>North America</b></div>
+       <div s-name="Middle East" class="bucket"><b>Middle East</b></div>
+     </div>
+     
+     <div labels>
+       <div s-name="New York"  class="label label-primary">New York</div>
+       <div s-name="London"  class="label label-primary">London</div>
+       <div s-name="Zurich"  class="label label-primary">Zurich</div>
+       <div s-name="Jerusalem"  class="label label-primary">Jerusalem</div>
+       <div s-name="Chicago"  class="label label-primary">Chicago</div>
+       <div s-name="Lugano"  class="label label-primary">Lugano</div>
+     </div>
+   </asq-buckets-q>
+  </section>
+
+
+  <section class="step" id="asq-order-q" data-x="6200" data-y="0" data-scale="0.4" data-z="1000">
+   <asq-exercise>
+     <asq-stem>Specify the order of Polymer lifecycle methods.</asq-stem>
+     <asq-order-q sortable="[label]" role="presenter">
+       <div label class="static" name="ready">ready</div>
+       <div label class="static" name="attached">attached</div>
+       <div label class="static" name="created">created</div>
+       <div label class="static" name="detached">detached</div>
+     </asq-order-q>
+  </asq-exercise>
+  </section>
+
+
+  <section class="step" id="asq-code-q" data-x="6800" data-y="0" data-scale="0.4" data-z="1000">
+    <asq-exercise max-num-submissions="3" assessment="self">
+        <asq-code-q  theme="monokai" mode="javascript" font-size="0.8em">
+          <asq-stem><h3>Write a simple for loop in JavaScript </h3></asq-stem>
+  <code>public class C {      
+  public void m() {
+  int i = i + 5 + ((int)5.0) + ((int)5f);
+  }
+  }</code>
+        </asq-code-q>
+   </asq-exercise>
+  </section>
+
+  <section class="step" id="asq-highlight-q" data-x="7400" data-y="0" data-scale="0.4" data-z="1000">
+   <asq-exercise max-num-submissions="-1">
+       <asq-highlight-q  theme="textmate" mode="java" font-size="0.65em">
+       <asq-solution>{"d9534f":[{"start":{"row":1,"column":2},"end":{"row":1,"column":8},"id":216},{"start":{"row":0,"column":0},"end":{"row":0,"column":6},"id":222}],"428bca":[{"start":{"row":2,"column":4},"end":{"row":2,"column":7},"id":229}],"f0ad4e":[{"start":{"row":0,"column":7},"end":{"row":0,"column":12},"id":236},{"start":{"row":1,"column":9},"end":{"row":1,"column":13},"id":243},{"start":{"row":2,"column":22},"end":{"row":2,"column":25},"id":250},{"start":{"row":2,"column":35},"end":{"row":2,"column":38},"id":256}]}</asq-solution>
+         <asq-stem class="small"><h3>Highlight with the appropriate color the following:</h3></asq-stem>
+         <asq-hl-color-task class="small" color="d9534f">Visibility Modifiers</asq-hl-color-task>
+           <asq-hl-color-task class="small" color="428bca">Variable Declarations</asq-hl-color-task>
+           <asq-hl-color-task class="small" color="f0ad4e">Other keywords</asq-hl-color-task>
+  <code>public class C {      
+  public void m() {
+  int i = i + 5 + ((int)5.0) + ((int)5f);
+  }
+  }</code>
+       </asq-highlight-q>
+  </asq-exercise>
+  </section>
+
+  <section class="step fullscreen" id="asq-fiddle-q" data-x="8000" data-y="0" data-scale="0.4" data-z="1000">
+   <asq-exercise max-num-submissions="-1">
+     <asq-fiddle-q>
+       <asq-stem>
+         <h4 class="small">Create a canvas that displays a green triangle</h4>
+       <asq-stem>
+     </asq-fiddle-q>
+   </asq-exercise>
+  </section>
+
+  <section class="step" id="asq-sqlite-q" data-x="8600" data-y="0" data-scale="0.4" data-z="1000">
+   <asq-exercise max-num-submissions="-1">
+       <asq-sqlite-q db-url="assets/Chinook_Sqlite.sqlite" font-size="0.6em">
+         <asq-stem class="small"><h4>INSERT some valid data in the TABLE `Employee`</h4></asq-stem>
+         <code></code>
+         <asq-solution>INSERT INTO `Employee` VALUES ()</asq-solution>
+       </asq-sqlite-q>
+   </asq-exercise>
+  </section>
+
+  <section class="step" id="asq-rating-q" data-x="9200" data-y="0" data-scale="0.4" data-z="1000">
+    <asq-exercise max-num-submissions="-1">
+     <asq-rating-q type="stars">
+       <asq-stem><h4>An asq-rating-q question.</h4></asq-stem>
+       <asq-rating-item name="item-1">Item to rate #1</asq-rating-item>
+       <asq-rating-item name="item-2">Item to rate #2</asq-rating-item>
+       <asq-rating-item name="item-3">Item to rate #3</asq-rating-item>
+       <asq-rating-item name="item-4">Item to rate #4</asq-rating-item>
+     </asq-rating-q>
+   </asq-exercise>
+  </section>
+
+  <section class="step" id="asq-canvas" data-x="9800" data-y="0" data-scale="0.4" data-z="1000">
+   <h3>This presentation has an &lt;asq-canvas&gt; element</h3>
+   <p>This element allows the presenter to start drawing by pressing `c` and then using their mouse. The drawing is then shared with the viewers.</p>
+  </section>
+     
+  <div id="refs" class="step nobreak" data-x="3000" data-y="1750" data-scale="0.4" data-rotate="-45">
+  	<h2>References</h2>
+  	<ul class="small"><li>Tim Berners-Lee, Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web, Collins, Nov.2000</li>
+    <li>Robert W. Sebesta, Programming the World Wide Web, Addison-Wesley, 2005</li>
+    <li>IETF, HTTP/1.1 Standard, RFC2616, June 1999 <a href="http://www.ietf.org/rfc/rfc2616.txt">http://www.ietf.org/rfc/rfc2616.txt</a></li>
+    <li>George Gilder, <a href="http://www.wired.com/wired/archive/14.10/cloudware.html">The Information Factories</a>, Wired 14.10, October 2006 – on Cloudware</li>
+    <li>Jeffrey Zeldman, Designing With Web Standards, Peachpit Press, ISBN 0321385551 - <a href="http://www.zeldman.com/dwws/">http://www.zeldman.com/dwws/</a></li>
+    <li>The Evolution of the Web, <a href="http://www.evolutionoftheweb.com/">http://www.evolutionoftheweb.com/</a></li>
+  </ul>
+  </div>
+
+  <div id="overview" class="step" data-x="2000" data-y="1200" data-scale="4.5"></div>
+
+
+  <div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+  </div>
+  
+  </div>
+  
+  <script src="bower_components/svg-injector/dist/svg-injector.min.js"></script>
+  <script src="bower_components/asq-impress-js/js/impress.js"></script>
+  <script src="bower_components/usi-web-atelier-slides-common/js/highlight.min.js"></script>
+  <script src="bower_components/impress-step-timer/impress-step-timer.js"></script>
+  <script src="bower_components/display-asq-solutions/display-asq-solutions.js"></script>
+  <script src="bower_components/usi-web-atelier-slides-common/js/main.js"></script>
+
+
+  <div id="copyright">&copy;2014 Cesare Pautasso</div>
+</body>
 </html>

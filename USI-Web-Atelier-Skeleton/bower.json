@@ -6,7 +6,7 @@
     "Cesare Pautasso",
     "Vasileios Triglianos"
   ],
-  "description": "asq-elements",
+  "description": "Presentation Skeleton for the USI Web Atelier course.",
   "main": "index.html",
   "keywords": [
     "USI",
@@ -25,9 +25,13 @@
   ],
   "dependencies": {
     "asq-elements": "ASQ-USI-Elements/asq-elements#master",
+    "asq-canvas": "asq-usi-elements/asq-canvas#master",
     "asq-impress-js": "ASQ-USI/impress.js#master",
+    "display-asq-solutions": "triglian/display-asq-solutions#master",
+    "impress-step-timer": "triglian/impress-step-timer#master",
+    "polymer": "~1.2.3",
     "svg-injector": "~1.1.3",
     "usi-web-atelier-slides-common": "ASQ-USI-Elements/usi-web-atelier-slides-common#master",
-    "webcomponentsjs": "~0.5.2"
+    "webcomponentsjs": "*"
   }
 }
