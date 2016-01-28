@@ -39,7 +39,8 @@
 </head>
 
 <body class="impress-not-supported">
-  <div id="canvas"></div>
+  <asq-canvas></asq-canvas>
+
   <div class="fallback-message">
       <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
       <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
@@ -181,7 +182,7 @@ Cache-Control: max-age=0</code></pre>
   <section class="step" id="asq-order-q" data-x="6200" data-y="0" data-scale="0.4" data-z="1000">
    <asq-exercise>
      <asq-stem>Specify the order of Polymer lifecycle methods.</asq-stem>
-     <asq-order-q sortable="[label]" role="presenter">
+     <asq-order-q sortable="[label]">
        <div label class="static" name="ready">ready</div>
        <div label class="static" name="attached">attached</div>
        <div label class="static" name="created">created</div>
@@ -193,13 +194,13 @@ Cache-Control: max-age=0</code></pre>
 
   <section class="step" id="asq-code-q" data-x="6800" data-y="0" data-scale="0.4" data-z="1000">
     <asq-exercise max-num-submissions="3" assessment="self">
-        <asq-code-q  theme="monokai" mode="javascript" font-size="0.8em">
+        <asq-code-q  theme="monokai" mode="javascript" font-size="0.65em">
           <asq-stem><h3>Write a simple for loop in JavaScript </h3></asq-stem>
   <code>public class C {      
   public void m() {
   int i = i + 5 + ((int)5.0) + ((int)5f);
   }
-  }</code>
+}</code>
         </asq-code-q>
    </asq-exercise>
   </section>
@@ -216,7 +217,7 @@ Cache-Control: max-age=0</code></pre>
   public void m() {
   int i = i + 5 + ((int)5.0) + ((int)5f);
   }
-  }</code>
+}</code>
        </asq-highlight-q>
   </asq-exercise>
   </section>
@@ -286,6 +287,6 @@ Cache-Control: max-age=0</code></pre>
   <script src="bower_components/usi-web-atelier-slides-common/js/main.js"></script>
 
 
-  <div id="copyright">&copy;2014 Cesare Pautasso</div>
+  <div id="copyright">&copy;2016 Cesare Pautasso</div>
 </body>
 </html>
