@@ -3,6 +3,12 @@
   <template>
     <style>
 
+:root{
+  --asq-sqlite-q-output:{
+    font-size: 0.65em;
+    background: white;
+  };
+}
 
 asq-canvas{
   position: absolute;
@@ -18,8 +24,14 @@ asq-highlight-q{
   min-height: 500px;
 }
 
-asq-fiddle-q{
-  height: 700px;
+asq-fiddle-q, asq-sqlite-q{
+  height: 760px;
+}
+
+asq-sqlite-q{
+  --paper-toolbar:{
+    font-size: 0.65em;
+  };
 }
 
 asq-code-q{
