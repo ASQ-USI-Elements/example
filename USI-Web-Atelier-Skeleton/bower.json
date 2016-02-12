@@ -29,8 +29,8 @@
     "asq-impress-js": "ASQ-USI/impress.js#master",
     "display-asq-solutions": "triglian/display-asq-solutions#master",
     "impress-step-timer": "triglian/impress-step-timer#master",
-    "polymer": "~1.2.3",
-    "svg-injector": "~1.1.3",
+    "polymer": "^1.2.3",
+    "svg-injector": "^1.1.3",
     "usi-web-atelier-slides-common": "ASQ-USI-Elements/usi-web-atelier-slides-common#master",
     "webcomponentsjs": "*"
   }
