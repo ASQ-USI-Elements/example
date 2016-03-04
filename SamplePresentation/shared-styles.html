@@ -8,6 +8,26 @@
     font-size: 0.65em;
     background: white;
   };
+
+  --asq-highlight-q-editor-container:{
+    flex: 3;
+  };
+  --asq-highlight-q-inspector:{
+    flex: 1.5;
+  };
+}
+
+asq-welcome{
+  text-align: center;
+}
+
+asq-css-select-q{
+  font-size: 0.85em;
+}
+
+asq-js-function-body-q{
+  font-size: 0.85em;
+  line-height: 1;
 }
 
 asq-canvas{
@@ -152,6 +172,23 @@ asq-buckets-q div.label.asq-disabled:focus  {
   border-color: #4C4C4C;
   cursor: auto;
 }
+
+asq-buckets-q .label-stat{
+  position: relative;
+}
+
+asq-buckets-q .label-stat-badge{
+  background: white;
+  color: black;
+  padding: 2px 6px 3px 6px;
+  border-radius: 10px;
+  position: absolute;
+  right: 4px;
+  line-height: 1;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 /* asq-order-q */
 asq-order-q > div[label] {
   display: flex;
