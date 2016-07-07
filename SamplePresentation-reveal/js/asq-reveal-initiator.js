@@ -54,8 +54,14 @@ var role = getParameterByName('role');
 
     keyboard: false
   }
-  console.log('role', role, revealSettings[role]);
   Reveal.initialize(revealSettings[role]);
+
+  // prevent the viewers from viewing an unauthorized slide by changing the hash
+  if (role !== 'presenter') {
+    Reveal.addEventListener('ready', function() {
+      Reveal.removeEventListeners();
+    });
+  }
 
 })(role, null);
 
