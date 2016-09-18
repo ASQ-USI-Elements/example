@@ -74,7 +74,7 @@
       </section>
 
      <section class="step" id="asq-text-input-q" data-x="3000" data-y="0" data-z="1000">
-        <asq-exercise max-num-submissions="8">
+        <asq-exercise max-num-submissions="8" confidence>
           <asq-text-input-q label="value" id="text-q">
             <asq-stem><h5>What's value of a[3]?</h5></asq-stem>
             <pre><code>
@@ -110,7 +110,6 @@
 
     <section class="step" id="asq-buckets-q" data-x="9000" data-y="0" data-z="1000">
       <asq-exercise class="container">
-        <asq-stem><h4>Drag the labels (name of cites) to match the buckets.</h4></asq-stem>
         <asq-buckets-q role="viewer"
           mode="1-3" 
           x-matchable="div[buckets]" 
@@ -119,6 +118,7 @@
           matched-attribute="matched"
           matched-class="label-success">
 
+          <asq-stem><h4>Drag the labels (name of cites) to match the buckets.</h4></asq-stem>
           <div buckets>
             <div s-name="Europe" class="bucket"><b>Europe</b></div>
             <div s-name="North America" class="bucket"><b>North America</b></div>
@@ -139,8 +139,8 @@
 
       <section class="step" id="asq-order-q" data-x="10500" data-y="0" data-z="1000">
         <asq-exercise>
-          <asq-stem>Specify the order of Polymer lifecycle methods.</asq-stem>
           <asq-order-q sortable="[label]">
+            <asq-stem>Specify the order of Polymer lifecycle methods.</asq-stem>
             <div label class="static" name="ready">ready</div>
             <div label class="static" name="attached">attached</div>
             <div label class="static" name="created">created</div>
