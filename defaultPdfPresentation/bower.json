@@ -22,6 +22,6 @@
   ],
   "dependencies": {
     "asq-elements": "ASQ-USI-Elements/asq-elements#master",
-    "webcomponentsjs": "*",
+    "webcomponentsjs": "*"
   }
 }
