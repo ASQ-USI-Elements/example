@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Scoreboard Rapid Mashup Challenge 2016</title>
+
+    <meta name="description" content="Scoreboard for Rapid Mashup Challenge 2016" />
+    <meta name="author" content="Vasileios Triglianos" />
+
+    {! <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'> !}
+    <!-- <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> -->
+    {! <link href="css/layout.css" type="text/css" rel="stylesheet"/> !}
+    {! <link href="css/scoreboard.css" type="text/css" rel="stylesheet"/> !}
+
+
+   
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> 
+    <!-- Use shadow dom -->
+    <script>
+      window.Polymer = window.Polymer || {~lb}{~rb};
+      window.Polymer.dom = 'shadow';
+    </script>
+    <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+    <link rel="import" href="bower_components/asq-mashup-challenge-scoreboard/asq-mashup-challenge-scoreboard.html">
+
+    <link rel="import" href="css/scoreboard-styles.html">
+    <style is="custom-style" include="scoreboard-styles"></style>
+  </head>
+
+  <body class="site" data-asq-role="{role}" data-asq-role="{role}" data-asq-host="{host}" data-asq-port="{port}" data-presentation-framework="{presentationFramework}" data-asq-session-id="{id}" data-asq-live-url="{presenterLiveUrl}" data-asq-presentation-viewer-url="{presentationViewUrl}" data-asq-socket-namespace="{namespace}" data-asq-socket-token="{token}" data-asq-user-session-id="{userSessionId}">
+
+
+    <header></header>
+    <main class="site-content">
+    
+    <div style="padding:40px;">
+       <asq-mashup-challenge-scoreboard></asq-mashup-challenge-scoreboard></main>
+      <footer></footer>
+    </div>
+
+    <img style="position:absolute; bottom:10px;right:3px;" width="10%" src="img/icwe2016-logo.png" alt="ICWE 2016 logo">
+
+    
+
+    <div id="powered-by-asq">
+      Powered by <a href="http://asq.inf.usi.ch/" target="_blank">
+        <img src="img/asq.png" alt="asq" />
+      </a>
+    </div>
+    {! <script src="js/jquery.js"></script> !}
+    {>asqPresentationScripts /}
+  </body>
+</html>
+

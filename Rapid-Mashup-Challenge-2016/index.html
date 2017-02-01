@@ -1,0 +1,401 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Rapid Mashup Challenge 2016</title>
+
+    <meta name="description" content="Rapid Mashup Challenge 2016" />
+    <meta name="author" content="Vasileios Triglianos" />
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+
+    <link href="css/layout.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./bower_components/FlipClock/compiled/flipclock.css">
+    
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> 
+    <!-- Use shadow dom -->
+    <script>
+      window.Polymer = window.Polymer || {};
+      window.Polymer.dom = 'shadow';
+    </script>
+
+    <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+    <link rel="import" href="bower_components/asq-rating-result/asq-rating-result.html">
+    <link rel="import" href="bower_components/asq-mashup-challenge-scoreboard/asq-mashup-challenge-scoreboard.html">
+
+    <link rel="import" href="css/index-styles.html">
+    <style is="custom-style" include="index-styles"></style>
+  </head>
+
+  <body class="impress-not-supported">
+
+    <header></header>
+    <footer></footer>
+
+    <div class="fallback-message">
+      <p>
+        Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.
+      </p>
+      <p>
+        For the best experience please use the latest <b>Chrome</b> browser.
+      </p>
+    </div>
+
+    <img style="position:absolute; bottom:20px;right:20px; width: 14%;" src="img/icwe2016-logo.png" alt="ICWE 2016 logo">
+
+    <div id="timer"></div>
+
+    <div id="powered-by-asq">
+      Powered by <a href="http://asq.inf.usi.ch/" target="_blank">
+        <img src="img/asq.png" alt="asq" />
+      </a>
+    </div>
+    <asq-settings max-num-submissions="-1" slideflow="ctrl" assessment="none"></asq-settings>
+    <div id="impress">
+
+      <section class="step" id="slide01" data-x="0" data-y="0">
+        <h1>2nd International Rapid Mashup Challenge</h1>
+        <h3 style="font-style:italic;font-weight:300;">ICWE2016</h3>
+        <p>Florian Daniel, Martin Gaedke</p>
+        <hr />
+        <asq-welcome></asq-welcome>
+        <p class="muted">(Google Chrome only)</p>
+      </section>
+
+
+      <div id="mashup7" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Evaluation Criteria</h1>
+      <ul>
+        <li>Expressive power of approach</li>
+        <li>Flexibility of approach</li>
+        <li>Maturity of approach</li>
+        <li>Tool intuitiveness</li>
+        <li>Tool effectiveness</li></ul>
+      </div>
+
+<!-- 
+      <div id="mashup9" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Rules</h1>
+      <ol><li>Compose at least two different APIs</li><li>Pick one API from:<ul><li>Google Maps</li><li>You Tube</li><li>New York Times</li></ul></li></ol>
+      </div> -->
+
+      <div id="mashup10" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Time</h1>
+      <ol><li>20' Presentation and Demo</li><li>5' Discussion and Voting</li></ol>
+      </div>
+
+      <div id="mashup11" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+        <h1 class="text-center">Challenge Participants</h1>
+          <ol>
+            <li>ICWE RMC 2016: FlexMash 2.0</li>
+            <li> The SmartComposition Approach for Creating Environment-Aware Multi-Screen Mashups</li>
+            <li> Linked Widgets Platform for Rapid Collaborative Semantic Mashup Development</li>
+            <li>Uduvudu Editor: Creating Mashups on top of the Semantic Web</li>
+            <li>Search-Based Mashup/Dashboards: Architecture and Best Practice</li>
+            <li> APIlet: a QBE approach to augmenting Web-based tools</li>
+            <li> End-User Development for the Internet of Things: EFESTO and the 5Ws composition paradigm</li>
+            <li>On the Role of Context in the Design of Mobile Mashups</li>
+        </ol>
+      </div>
+
+      <section class="step timed" id="slide03" data-x="4000" data-y="0" data-z="1000">
+        <asq-exercise class="exercise">
+          <asq-stem>
+            <h1 class="mashup-title">FlexMash 2.0</h1>
+            <h3 class="mashup-subtitle">Please rate 'ICWE RMC 2016: FlexMash 2.0'</h3>
+            <p class="mashup-authors">Pascal Hirmer</p>
+          </asq-stem>
+          <asq-rating-q type="stars" id="r-1">
+            <asq-stem>FlexMash 2.0</asq-stem>
+            <asq-rating-item name="expressive_power">Expressive power</asq-rating-item>
+            <asq-rating-item name="flexibility">Flexibility</asq-rating-item>
+            <asq-rating-item name="maturity">Maturity</asq-rating-item>
+            <asq-rating-item name="intuitiveness">Intuitiveness</asq-rating-item>
+            <asq-rating-item name="effectiveness">Effectiveness</asq-rating-item>
+          </asq-rating-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide04" data-x="6000" data-y="0" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">FlexMash 2.0</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-1">
+        </asq-rating-result >
+      </section>
+
+      <section class="step timed" id="slide06" data-x="4000" data-y="1500" data-z="1000">
+        <asq-exercise class="exercise">
+          <asq-stem>
+            <h1 class="mashup-title">SmartComposition</h1>
+            <h3 class="mashup-subtitle">Please rate 'The SmartComposition Approach for Creating Environment-Aware Multi-Screen Mashups.'</h3>
+            <p class="mashup-authors">Michael Krug, Fabian Wiedemann, Markus Ast, and Martin Gaedke</p>
+          </asq-stem>
+          <asq-rating-q type="stars" id="r-2">
+            <asq-stem>SmartComposition</asq-stem>
+            <asq-rating-item name="expressive_power">Expressive power</asq-rating-item>
+            <asq-rating-item name="flexibility">Flexibility</asq-rating-item>
+            <asq-rating-item name="maturity">Maturity</asq-rating-item>
+            <asq-rating-item name="intuitiveness">Intuitiveness</asq-rating-item>
+            <asq-rating-item name="effectiveness">Effectiveness</asq-rating-item>
+          </asq-rating-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide07" data-x="6000" data-y="1500" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">SmartComposition</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-2">
+        </asq-rating-result >
+      </section>
+
+      <section class="step timed" id="slide09" data-x="4000" data-y="3000" data-z="1000">
+        <asq-exercise class="exercise">
+          <asq-stem>
+            <h1 class="mashup-title">Linked Widgets Platform</h1>
+            <h3 class="mashup-subtitle">Please rate 'Linked Widgets Platform for Rapid Collaborative Semantic Mashup Development.'</h3>
+            <p class="mashup-authors">Tuan-Dat Trinh, Ba-Lam Do, Peter Wetz, Peb Ruswono Aryan, Elmar Kiesling, and A Min Tjoa</p>
+          </asq-stem>
+          <asq-rating-q type="stars" id="r-3">
+            <asq-stem>Linked Widgets Platform</asq-stem>
+            <asq-rating-item name="expressive_power">Expressive power</asq-rating-item>
+            <asq-rating-item name="flexibility">Flexibility</asq-rating-item>
+            <asq-rating-item name="maturity">Maturity</asq-rating-item>
+            <asq-rating-item name="intuitiveness">Intuitiveness</asq-rating-item>
+            <asq-rating-item name="effectiveness">Effectiveness</asq-rating-item>
+          </asq-rating-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide10" data-x="6000" data-y="3000" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">Linked Widgets Platform</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-3">
+        </asq-rating-result >
+      </section>
+
+      <section class="step timed" id="slide31" data-x="4000" data-y="4500" data-z="1000">
+        <asq-exercise class="exercise">
+          <asq-stem>
+            <h1 class="mashup-title">Uduvudu Editor</h1>
+            <h3 class="mashup-subtitle">Please rate 'Uduvudu Editor: Creating Mashups on top of the Semantic Web.'</h3>
+            <p class="mashup-authors">Michael Luggen</p>
+          </asq-stem>
+          <asq-rating-q type="stars" id="r-4">
+            <asq-stem>Linked Widgets Platform</asq-stem>
+            <asq-rating-item name="expressive_power">Expressive power</asq-rating-item>
+            <asq-rating-item name="flexibility">Flexibility</asq-rating-item>
+            <asq-rating-item name="maturity">Maturity</asq-rating-item>
+            <asq-rating-item name="intuitiveness">Intuitiveness</asq-rating-item>
+            <asq-rating-item name="effectiveness">Effectiveness</asq-rating-item>
+          </asq-rating-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide132" data-x="6000" data-y="4500" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">Uduvudu Editor</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-4">
+        </asq-rating-result >
+      </section>
+
+      <section class="step timed" id="slide12" data-x="4000" data-y="6000" data-z="1000">
+        <asq-exercise class="exercise">
+          <asq-stem>
+            <h1 class="mashup-title"> Search based Mashup/Dashboards</h1>
+            <h3 class="mashup-subtitle">Please rate 'Search based Mashup/Dashboards: architecture and best practice'</h3>
+            <p class="mashup-authors">Eduard Daoud</p>
+          </asq-stem>
+          <asq-rating-q type="stars" id="r-5">
+            <asq-stem> Search based Mashup/Dashboards</asq-stem>
+            <asq-rating-item name="expressive_power">Expressive power</asq-rating-item>
+            <asq-rating-item name="flexibility">Flexibility</asq-rating-item>
+            <asq-rating-item name="maturity">Maturity</asq-rating-item>
+            <asq-rating-item name="intuitiveness">Intuitiveness</asq-rating-item>
+            <asq-rating-item name="effectiveness">Effectiveness</asq-rating-item>
+          </asq-rating-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide13" data-x="6000" data-y="6000" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title"> Search based Mashup/Dashboards</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-5">
+        </asq-rating-result >
+      </section>
+
+      <section class="step timed" id="slide15" data-x="4000" data-y="7500" data-z="1000">
+        <asq-exercise class="exercise">
+          <asq-stem>
+           <h1 class="mashup-title">APIlet</h1>
+            <h3 class="mashup-subtitle">Please rate 'APIlet: a QBE approach to augmenting Web-based tools.'</h3>
+            <p class="mashup-authors">Jeremías P. Contell and Oscar Díaz</p>
+            </asq-stem>
+          <asq-rating-q type="stars" id="r-6">
+            <asq-stem>APIlet</asq-stem>
+            <asq-rating-item name="expressive_power">Expressive power</asq-rating-item>
+            <asq-rating-item name="flexibility">Flexibility</asq-rating-item>
+            <asq-rating-item name="maturity">Maturity</asq-rating-item>
+            <asq-rating-item name="intuitiveness">Intuitiveness</asq-rating-item>
+            <asq-rating-item name="effectiveness">Effectiveness</asq-rating-item>
+          </asq-rating-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide16" data-x="6000" data-y="7500" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">APIlet</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-6">
+        </asq-rating-result >
+      </section>
+
+      <section class="step timed" id="slide18" data-x="4000" data-y="9000" data-z="1000">
+        <asq-exercise class="exercise">
+          <asq-stem>
+            <h1 class="mashup-title">EFESTO</h1>
+            <h3 class="mashup-subtitle">Please rate 'End-User Development for the Internet of Things: EFESTO and the 5Ws composition paradigm.'</h3>
+            <p class="mashup-authors">Giuseppe Desolda, Carmelo Ardito and Maristella 
+          </asq-stem>
+          <asq-rating-q type="stars" id="r-7">
+            <asq-stem>EFESTO</asq-stem>
+            <asq-rating-item name="expressive_power">Expressive power</asq-rating-item>
+            <asq-rating-item name="flexibility">Flexibility</asq-rating-item>
+            <asq-rating-item name="maturity">Maturity</asq-rating-item>
+            <asq-rating-item name="intuitiveness">Intuitiveness</asq-rating-item>
+            <asq-rating-item name="effectiveness">Effectiveness</asq-rating-item>
+          </asq-rating-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide19" data-x="6000" data-y="9000" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">EFESTO</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-7">
+        </asq-rating-result >
+      </section>
+
+      <section class="step timed" id="slide21" data-x="4000" data-y="10500" data-z="1000">
+        <asq-exercise class="exercise">
+          <asq-stem>
+           <h1 class="mashup-title">On the Role of Context in the Design of Mobile Mashups.</h1>
+
+            <h3 class="mashup-subtitle">Please rate 'On the Role of Context in the Design of Mobile Mashups.'</h3>
+            <p class="mashup-authors">Valerio Cassani, Stefano Gianelli, Maristella Matera, Riccardo Medana, Elisa Quintarelli, Letizia Tanca and Vittorio Zaccaria.</p>
+          </asq-stem>
+          <asq-rating-q type="stars" id="r-8">
+            <asq-stem>Context Mobile Mashups</asq-stem>
+            <asq-rating-item name="expressive_power">Expressive power</asq-rating-item>
+            <asq-rating-item name="flexibility">Flexibility</asq-rating-item>
+            <asq-rating-item name="maturity">Maturity</asq-rating-item>
+            <asq-rating-item name="intuitiveness">Intuitiveness</asq-rating-item>
+            <asq-rating-item name="effectiveness">Effectiveness</asq-rating-item>
+          </asq-rating-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide22" data-x="6000" data-y="10500" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">On the Role of Context in the Design of Mobile Mashups.</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-8">
+        </asq-rating-result >
+      </section>
+
+      <section class="step" id="  " data-x="2000" data-y="12000" data-z="1000">
+        <!-- <h1>Rapid Mashup Challenge</h1> -->
+        <h3 class="mashup-subtitle" style="margin:0; text-align:center;">Rapid Mashup Challenge</h3>
+        <h1 class="mashup-title" style="margin:0; text-align:center;">Standings</h1>
+        <asq-mashup-challenge-scoreboard>
+        </asq-mashup-challenge-scoreboard>
+      </section>
+
+    </div>
+    <template id="buttonTemplate">
+      <paper-button class="toggle-button" raised="true">Stats</paper-button>
+    </template>
+
+    <script type="text/javascript" src="js/init.js"></script>
+    <script>
+    (function(){
+      function addToggleButtons(){
+        document.querySelectorAll('asq-exercise').array().forEach(function(ex){
+          if(ex.role !="presenter") return;
+          var parent = ex.parentNode;
+          var template = document.querySelector('#buttonTemplate');
+          var clone = document.importNode(template.content, true);
+          parent.appendChild(clone);
+          parent.querySelector('asq-exercise asq-rating').classList.add('transparent')
+        });  
+
+        document.addEventListener("click", function(){
+          if (event.target.classList.contains('toggle-button')){
+            event.target.parentNode.querySelector('asq-exercise asq-rating').classList.toggle('transparent')
+          }
+        })   
+      }
+
+      // window.addEventListener('polymer-ready', function() {
+      //   init();
+
+      //   if(document.body.dataset.asqRole =="presenter"){
+      //     addToggleButtons();
+      //   }
+      // });
+      
+    })();
+		if ("ontouchstart" in document.documentElement) {
+			document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+		}
+    </script>
+		<script src="js/jquery.js"></script>
+    <script src="./bower_components/FlipClock/compiled/flipclock.min.js"></script>
+    <script src="js/impress.js"></script>
+    <script>
+    impress().init();
+    </script>
+    <script>
+
+    var clockEl = document.querySelector('#timer');
+
+    var clock = $('#timer').FlipClock(1200, {
+      autoStart:false,
+      countdown: true,
+      clockFace: 'MinuteCounter'
+    });
+
+    var tenMinutes = 120 * 10;
+
+    document.addEventListener("impress:stepenter", function(e){
+      if (e.srcElement.classList.contains('timed')){
+        clock.setTime(tenMinutes)
+        clock.start();
+        clockEl.style.opacity = "1";
+      }else{
+        clock.setTime(tenMinutes)
+        clock.stop();
+        clockEl.style.opacity = "0";
+      }
+    })
+
+    </script>
+  </body>
+</html>
+

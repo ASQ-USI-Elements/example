@@ -1,0 +1,57 @@
+ <!-- index-styles.html -->
+<dom-module id="index-styles" is="custom-style">
+  <template>
+    <style>
+
+
+/* ASQ Elements*/
+
+
+:root{
+  --paper-datatable-column-header:{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 100;
+    padding: 6px 10px 6px 10px;
+  };
+
+  --paper-datatable-cell:{
+    font-size: 1.1rem;
+    padding: 6px 10px 6px 10px;
+  };
+
+  --paper-datatable-cell-last:{
+    padding-right: 10px;
+  };
+}
+
+asq-welcome::shadow #qrCodeContainer{
+    text-align: center;
+}
+
+asq-rating-q > asq-stem,
+asq-rating-result > asq-stem{
+  display: none;
+}
+
+asq-rating-item{
+    margin: 5px 0;
+}
+
+ .toggle-button {
+  color: #fff;
+  background-color: #5cb85c;
+}
+
+asq-rating-q{
+  transition: opacity 0.1s ease-out;
+}
+
+asq-rating-q.transparent{
+  opacity:0;
+}
+
+    </style> 
+  </template>
+</dom-module>
