@@ -1,0 +1,28 @@
+{
+  "name": "rapid-mashup-challenge-2016-pres",
+  "private": "true",
+  "version": "0.1.0",
+  "authors": [
+    "Vassilis Triglianos <triglian@gmail.com>"
+  ],
+  "description": "Rapid-Mashup-Challenge-2016 presentation",
+  "main": "app.js",
+  "keywords": [
+    "asq",
+    "shadowDOM"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "asq-elements": "ASQ-USI-Elements/asq-elements#master",
+    "asq-mashup-challenge-scoreboard": "ASQ-USI-Elements/asq-mashup-challenge-scoreboard#feat-polymer-1",
+    "webcomponentsjs": "^0.7.0"
+  }
+}

@@ -1,0 +1,441 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>USI.INF 10th Anniversary - Software Engineering Trivia</title>
+
+  <meta name="description" content="Trivia Questions about Software Engineering" />
+  <meta name="author" content="Cesare Pautasso, Vasileios Triglianos" />
+
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script>
+  window.Polymer = window.Polymer || {};
+  window.Polymer.dom = 'shadow';
+  </script>
+
+  <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+  <link rel="import" href="bower_components/asq-rating-result/asq-rating-result.html">
+  <link rel="import" href="bower_components/asq-mashup-challenge-scoreboard/asq-mashup-challenge-scoreboard.html">
+
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+  <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>
+  <link href="css/asq-default-theme.css" type="text/css" rel="stylesheet"/>
+  <link href="css/svg-inputs.css" type="text/css" rel="stylesheet"/>
+  <style>
+  .asq-correct-light{
+    background-color: #3A612A;
+  }
+
+  .asq-wrong-light{
+    background-color: #862525;
+  }
+
+  .asq-confidence-label{
+    color: #a0a0a0;
+  }
+
+  article ol {
+    list-style-type: none;
+  }
+
+  #playername {
+    color: black;
+  }
+
+  .usi-logo{
+    position:fixed;
+    top: 5px;
+    left:5px;
+    width:160px;
+  }
+
+  .main-title{
+    position:fixed;
+    top: 0px;
+    left: 290px;
+    font-size: 3.2em;
+  }
+
+  #final{
+    padding: 5em;
+  }
+
+  .results{
+    font-size: 1.2em;
+  }
+
+  .result-field{
+    color: #a0a0a0;
+    font-style: italic;
+    font-size: 0.85em;
+  }
+
+  .rank-badge{
+    width: 65px;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    display: inline-block;
+    position:relative;
+    top:15px;
+    left:5px;
+  }
+
+  .rank-first .rank-value{
+    color: #f7e16a;
+  }
+
+  .rank-first .rank-badge{
+    background-image: url('img/gold-medal.png');
+  }
+
+  .rank-second .rank-value{
+    color: #c8c9cb;
+  }
+
+  .rank-second .rank-badge{
+    background-image: url('img/silver-medal.png');
+  }
+
+  .rank-third .rank-value{
+    color: #e49322;
+  }
+
+  .rank-third .rank-badge{
+    background-image: url('img/bronze-medal.png');
+  }
+
+  </style>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+</head>
+
+<body class="impress-not-supported">
+
+  <div class="fallback-message">
+    <p>
+      Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.
+    </p>
+    <p>
+      For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
+    </p>
+  </div>
+
+  <img class="usi-logo" src="img/logo.png" alt="usi logo">
+  <h1 class="main-title">Gioca con le tue conoscenze</h1>
+
+  <div id="impress" data-transition-duration="400">
+
+    <section class="step" id="slide01" data-x="0" data-y="0">
+      <h1>Gioca per vincere una tazza USI!</h1>
+      <h3>Rispondi a più domande possibile</h3>
+      <p id="countdown" style="font-size:2em"></p>
+      Qual è il tuo nome?
+      <form action="" id="playername-form">
+        <input type="text" id="playername">
+        <button type="submit" class='btn btn-primary' id="start-btn">Clicca per iniziare</button>
+      </form>
+      <article class="asq-welcome-screen"></article>
+    </section>
+
+
+    <section class="step" id="sq2" data-x="4000" data-y="0">
+      <article class="asq-question multi-choice choose-1" id="q-2">
+        <asq-exercise>
+          <asq-multi-choice-q>
+            <asq-stem><h3 >Quanto tempo ci vuole per deciffrare la password <b>usilugano</b>?</h3></asq-stem>
+
+            <asq-option name="asq-option1">
+              19 secondi
+            </asq-option>
+            <asq-option name="asq-option2" correct>
+              22 minuti
+            </asq-option>
+            <asq-option name="asq-option3">
+              38 giorni
+            </asq-option>
+            <asq-option name="asq-option4">
+              4 anni
+            </asq-option>
+          </asq-multi-choice-q>
+        </asq-exercise>
+      </article>
+    </section>
+
+
+    <section class="step" id="sq3" data-x="5000" data-y="0">
+      <article class="asq-question multi-choice choose-1" id="q-3">
+        <asq-exercise>
+          <asq-multi-choice-q>
+            <asq-stem><h3 >In C++, cosa succederebbe se scrivessi <b>scrivi("Ciao a tutti")</b>?</h3>  </asq-stem>
+
+            <asq-option name="asq-option1" correct>
+              Il programma darebbe errore
+            </asq-option>
+            <asq-option name="asq-option2">
+              Il programma funzionerebbe
+            </asq-option>
+
+          </asq-multi-choice-q>
+        </asq-exercise>
+      </article>
+    </section>
+
+
+    <section class="step" id="sq4" data-x="6000" data-y="0">
+      <article class="asq-question multi-choice choose-1" id="q-4">
+        <asq-exercise>
+          <asq-multi-choice-q>
+            <asq-stem><h3 >Quando è stato coniato il termine <b>Open source</b>?</h3></asq-stem>
+
+            <asq-option name="asq-option1">
+              1990
+            </asq-option>
+            <asq-option name="asq-option2">
+              1995
+            </asq-option>
+            <asq-option name="asq-option3" correct>
+              1998
+            </asq-option>
+            <asq-option name="asq-option4">
+              2001
+            </asq-option>
+          </asq-multi-choice-q>
+        </asq-exercise>
+      </article>
+    </section>
+
+
+    <section class="step" id="sq5" data-x="7000" data-y="0">
+      <article class="asq-question multi-choice choose-1" id="q-5">
+        <asq-exercise>
+          <asq-multi-choice-q>
+            <asq-stem><h3 >Cosa vuol dire l’acronimo <b>SSD</b> in italiano?</h3></asq-stem>
+            <asq-option name="asq-option1">
+              Disco a Stato Solido
+            </asq-option>
+            <asq-option name="asq-option2" correct>
+              Unità a Stato Solido
+            </asq-option>
+          </asq-multi-choice-q>
+        </asq-exercise>
+      </article>
+    </section>
+
+
+    <section class="step" id="sq6" data-x="8000" data-y="0">
+      <article class="asq-question multi-choice choose-1" id="q-6">
+        <asq-exercise>
+          <asq-multi-choice-q>
+            <asq-stem><h3 >Che cosa leggono i <b>router</b>?</h3></asq-stem>
+
+            <asq-option name="asq-option1" correct>
+              Pacchetti
+            </asq-option>
+            <asq-option name="asq-option2">
+              Documenti
+            </asq-option>
+            <asq-option name="asq-option3">
+              File
+            </asq-option>
+            <asq-option name="asq-option4">
+              Immagini
+            </asq-option>
+          </asq-multi-choice-q>
+        </asq-exercise>
+      </article>
+    </section>
+
+
+
+    <section class="step" id="sq7" data-x="9000" data-y="0">
+      <article class="asq-question multi-choice choose-1" id="q-7">
+        <asq-exercise>
+          <asq-multi-choice-q>
+            <asq-stem><h3 class="asq-stem">Come vengono usati i <b>mashup</b>?</h3>  </asq-stem>
+            <asq-option name="asq-option1">
+              Via il Kernel
+            </asq-option>
+            <asq-option name="asq-option2" data-asq-correct="true">
+              Via diverse API
+            </asq-option>
+            <asq-option name="asq-option3">
+              Via le informazioni di Google e Amazon
+            </asq-option>
+            <asq-option name="asq-option4">
+              Via messaggi di posta
+            </asq-option>
+          </asq-multi-choice-q>
+        </asq-exercise>
+      </article>
+    </section>
+
+
+    <section class="step" id="sq8" data-x="10000" data-y="0">
+      <article class="asq-question multi-choice choose-1" id="q-8">
+        <asq-exercise>
+          <asq-multi-choice-q>
+            <asq-stem><h3 >Quale di questi oggetti permette di usufruire della <b>realtà aumentata</b>?</h3>  </asq-stem>
+              <asq-option name="asq-option1">
+                Google SSD
+              </asq-option>
+              <asq-option name="asq-option2">
+                Google Cloud
+              </asq-option>
+              <asq-option name="asq-option3" correct>
+                Google Glass
+              </asq-option>
+            </asq-multi-choice-q>
+          </asq-exercise>
+        </article>
+      </section>
+
+
+      <section class="step" id="sq9" data-x="11000" data-y="0">
+        <article class="asq-question multi-choice choose-1" id="q-9">
+          <asq-exercise>
+            <asq-multi-choice-q>
+              <asq-stem><h3>Qual'è il principale vantaggio del <b>Cloud</b>?</h3></asq-stem>
+
+              <asq-option name="asq-option1">
+                Conoscere il meteo di qualunque luogo
+              </asq-option>
+              <asq-option name="asq-option2">
+                Mandare messaggi gratis
+              </asq-option>
+              <asq-option name="asq-option3" correct>
+                Accedere ai propri dati ovunque
+              </asq-option>
+
+            </asq-multi-choice-q>
+          </asq-exercise>
+        </article>
+        <p class="source">http://gizmodo.com/5984165/this-was-the-first-banner-ad-on-the-internet</p>
+      </section>
+
+
+
+
+      <section class="step" id="sq10" data-x="12000" data-y="0">
+        <article class="asq-question multi-choice choose-1" id="q-10">
+          <asq-exercise>
+            <asq-multi-choice-q>
+              <asq-stem><h3>Come si crea l'<b>intelligenza artificiale</b>?</h3></asq-stem>
+              <asq-option name="asq-option1">
+                Collegando tanti cervelli
+              </asq-option>
+              <asq-option name="asq-option2">
+                Utilizzando il processore di una scheda grafica
+              </asq-option>
+              <asq-option name="asq-option3" correct>
+                Creando un insieme di reti neurali
+              </asq-option>
+            </asq-multi-choice-q>
+          </asq-exercise>
+        </article>
+      </section>
+
+
+
+      <section class="step" id="sq11" data-x="13000" data-y="0">
+        <article class="asq-question multi-choice choose-1" id="q-11">
+          <asq-exercise>
+            <asq-multi-choice-q>
+              <asq-stem><h3>Cosa permette all'utente di interagire con la macchina?</h3>  </asq-stem>
+
+              <asq-option name="asq-option1">
+                Kernell
+              </asq-option>
+              <asq-option name="asq-option2">
+                Spooler
+              </asq-option>
+              <asq-option name="asq-option3" correct>
+                Shell
+              </asq-option>
+
+            </asq-multi-choice-q>
+          </asq-exercise>
+        </article>
+        <p class="source"></p>
+      </section>
+
+
+      <section class="step" id="sq12" data-x="14000" data-y="0">
+        <article class="asq-question multi-choice choose-1" id="q-12">
+          <asq-exercise>
+            <asq-multi-choice-q>
+              <asq-stem><h3 >Che cosa utilizzano i negozi online per ricordarsi dei propri utenti?</h3><asq-stem>
+                <asq-option name="asq-option1">
+                  Username e password
+                </asq-option>
+                <asq-option name="asq-option2">
+                  Algoritmi
+                </asq-option>
+                <asq-option name="asq-option3" correct>
+                  Cookies
+                </asq-option>
+
+              </asq-multi-choice-q>
+            </asq-exercise>
+          </article>
+        </section>
+
+
+
+
+        <section class="step" id="final" data-x="16000" data-y="0">
+          <article>
+            <h2>Ben fatto!</h2>
+            <div class='results' id="total-results">
+              <div class="rank">
+                <span class='result-field'>posizione:</span> <span class="rank-value">-</span><div class="rank-badge"></div>
+              </div>
+              <div class="score">
+                <span class='result-field'>punti:</span> <span class='score-value'></span>
+              </div>
+              <div class="total-time">
+                <span class='result-field'>tempo totale:</span> <span class='total-time-value'></span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/fastclick.js"></script>
+        <script>FastClick.attach(document.body);</script>
+        <script src="js/impress.js"></script>
+        <script>impress().init()</script>
+        <script>
+
+        $.fn.shuffle = function() {
+          return this.each(function(){
+            var items = $(this).children().clone(true);
+            return (items.length) ? $(this).html($.shuffle(items)) : this;
+          });
+        }
+        $.shuffle = function(arr) {
+          for(var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
+          return arr;
+        }
+        // $('.asq-options').shuffle();
+
+        </script>
+        <script>
+        radioStyles= ['svg-fill', 'svg-circle', 'svg-swirl']
+        $('.asq-question').each(function(){
+          var random = Math.floor(Math.random() * (radioStyles.length - 1));
+          $(this).addClass('svg-input svg-radio' + ' ' + radioStyles[random] )
+        })
+        </script>
+        <script src="js/svgcheckbx.js"></script>
+        <script src="js/app.js"></script>
+
+      </body>
+      </html>
