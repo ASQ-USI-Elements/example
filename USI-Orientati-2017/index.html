@@ -21,29 +21,13 @@
   </script>
 
   <link rel="import" href="bower_components/asq-elements/asq-elements.html">
-  <link rel="import" href="bower_components/asq-rating-result/asq-rating-result.html">
-  <link rel="import" href="bower_components/asq-mashup-challenge-scoreboard/asq-mashup-challenge-scoreboard.html">
+  <!-- <link rel="import" href="bower_components/asq-mashup-challenge-scoreboard/asq-mashup-challenge-scoreboard.html"> -->
 
   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
   <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>
   <link href="css/asq-default-theme.css" type="text/css" rel="stylesheet"/>
   <link href="css/svg-inputs.css" type="text/css" rel="stylesheet"/>
   <style>
-  .asq-correct-light{
-    background-color: #3A612A;
-  }
-
-  .asq-wrong-light{
-    background-color: #862525;
-  }
-
-  .asq-confidence-label{
-    color: #a0a0a0;
-  }
-
-  article ol {
-    list-style-type: none;
-  }
 
   #playername {
     color: black;
@@ -62,56 +46,6 @@
     left: 290px;
     font-size: 3.2em;
   }
-
-  #final{
-    padding: 5em;
-  }
-
-  .results{
-    font-size: 1.2em;
-  }
-
-  .result-field{
-    color: #a0a0a0;
-    font-style: italic;
-    font-size: 0.85em;
-  }
-
-  .rank-badge{
-    width: 65px;
-    height: 75px;
-    background-repeat: no-repeat;
-    background-size: 50px;
-    display: inline-block;
-    position:relative;
-    top:15px;
-    left:5px;
-  }
-
-  .rank-first .rank-value{
-    color: #f7e16a;
-  }
-
-  .rank-first .rank-badge{
-    background-image: url('img/gold-medal.png');
-  }
-
-  .rank-second .rank-value{
-    color: #c8c9cb;
-  }
-
-  .rank-second .rank-badge{
-    background-image: url('img/silver-medal.png');
-  }
-
-  .rank-third .rank-value{
-    color: #e49322;
-  }
-
-  .rank-third .rank-badge{
-    background-image: url('img/bronze-medal.png');
-  }
-
   </style>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <link rel="import" href="shared-styles.html">
@@ -413,7 +347,6 @@
         <script src="js/fastclick.js"></script>
         <script>FastClick.attach(document.body);</script>
         <script src="js/impress.js"></script>
-        <script>impress().init()</script>
         <script>
 
         $.fn.shuffle = function() {
@@ -426,15 +359,17 @@
           for(var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
           return arr;
         }
-        // $('.asq-options').shuffle();
+        $('asq-options').shuffle();
 
         </script>
         <script>
-        radioStyles= ['svg-fill', 'svg-circle', 'svg-swirl']
-        $('.asq-question').each(function(){
-          var random = Math.floor(Math.random() * (radioStyles.length - 1));
-          $(this).addClass('svg-input svg-radio' + ' ' + radioStyles[random] )
-        })
+        // asq will start it for us
+        try{
+            impress().init();
+        }catch(e){
+          //impress is not available at this point when injected from asq-options
+          // noop
+        }
         </script>
         <script src="js/svgcheckbx.js"></script>
         <script src="js/app.js"></script>
