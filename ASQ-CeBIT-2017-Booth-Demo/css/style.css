@@ -1,0 +1,161 @@
+.text-left {
+  text-align: left
+}
+
+.text-right {
+  text-align: right
+}
+
+.text-center {
+  text-align: center
+}
+
+.text-justify {
+  text-align: justify
+}
+
+.medium{
+  font-size: 0.85em;
+}
+
+.small{
+  font-size: 0.7em;
+}
+
+.smaller{
+  font-size: 0.6em;
+}
+
+.x-small{
+  font-size: 0.5em;
+}
+
+#role-holder{
+  text-align: center;
+  font-size: 2em;
+  width:200px;
+  overflow: hidden;
+  position: fixed;
+  top: 10px;
+  left: calc(50% - 100px);
+}
+
+body[data-asq-role="presenter"] #viewer-label{
+  display:none;
+}
+
+body[data-asq-role="viewer"] #beamer-label{
+  display:none;
+}
+
+#uni-logo-holder{
+  width:172px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+}
+
+
+#uni-logo{
+  width:420px;
+}
+
+#switzerland-logo-holder{
+  width:200px;
+  overflow: hidden;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+
+#switzerland-logo{
+  width:200px;
+}
+
+/*Intro animation*/
+
+#asq-logo{
+  perspective: 800px;
+  position: relative;
+  width: 316px;
+  height: 100px;
+  margin: 0 auto;
+}
+.anim{
+  transform-style: preserve-3d;
+  position: absolute;
+  top:0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.backfacing{
+  transform: rotateY( 180deg );
+}
+
+.a{ left: 0px;}
+.s{ left: 110px;}
+.q{ left: 220px;}
+
+.anim {
+  -webkit-animation: frontsideAnimation 6s ease infinite;
+  -moz-animation: frontsideAnimation 6s ease infinite;
+  -o-animation: frontsideAnimation 6s ease infinite;
+  animation: frontsideAnimation 6s ease infinite;
+}
+
+.anim.backfacing {
+  -webkit-animation: backsideAnimation 6s ease infinite;
+  -moz-animation: backsideAnimation 6s ease infinite;
+  -o-animation: backsideAnimation 6s ease infinite;
+  animation: backsideAnimation 6s ease infinite;
+}
+
+@-webkit-keyframes frontsideAnimation {
+0% { -webkit-transform: rotateY(0deg); }
+50% { -webkit-transform: rotateY(180deg); }
+100% { -webkit-transform: rotateY(360deg); }
+}
+
+@-moz-keyframes frontsideAnimation {
+0% { -webkit-transform: rotateY(0deg); }
+50% { -webkit-transform: rotateY(180deg); }
+100% { -webkit-transform: rotateY(360deg); }
+}
+
+@-o-keyframes frontsideAnimation {
+0% { -webkit-transform: rotateY(0deg); }
+50% { -webkit-transform: rotateY(180deg); }
+100% { -webkit-transform: rotateY(360deg); }
+}
+
+@keyframes frontsideAnimation {
+0% { -webkit-transform: rotateY(0deg); }
+50% { -webkit-transform: rotateY(180deg); }
+100% { -webkit-transform: rotateY(360deg); }
+}
+
+@-webkit-keyframes backsideAnimation {
+0% { -webkit-transform: rotateY(180deg); }
+50% { -webkit-transform: rotateY(360deg); }
+100% { -webkit-transform: rotateY(540deg); }
+}
+
+@-moz-keyframes backsideAnimation {
+0% { -webkit-transform: rotateY(180deg); }
+50% { -webkit-transform: rotateY(360deg); }
+100% { -webkit-transform: rotateY(540deg); }
+}
+
+@-o-keyframes backsideAnimation {
+0% { -webkit-transform: rotateY(180deg); }
+50% { -webkit-transform: rotateY(360deg); }
+100% { -webkit-transform: rotateY(540deg); }
+}
+
+@keyframes backsideAnimation {
+0% { -webkit-transform: rotateY(180deg); }
+50% { -webkit-transform: rotateY(360deg); }
+100% { -webkit-transform: rotateY(540deg); }
+}

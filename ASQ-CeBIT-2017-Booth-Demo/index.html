@@ -1,0 +1,306 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>ASQ @ CeBIT</title>
+
+    <meta name="description" content="This is a basic sample presentation showing the featues of ASQ" />
+    <meta name="author" content="Max von Bülow, Vasileios Triglianos" />
+
+   <!--  <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'> -->
+
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>    
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> 
+    <!-- Use shadow dom -->
+    <script>
+      window.Polymer = window.Polymer || {};
+      window.Polymer.dom = 'shadow';
+    </script>
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+    <link rel="import" href="bower_components/asq-canvas/asq-canvas.html">
+    <link rel="import" href="n-fullscreen-impress-steps.html">
+
+    <link rel="import" href="shared-styles.html">
+    <style is="custom-style" include="shared-styles"></style>
+    
+  </head>
+
+  <body class="impress-not-supported" data-asq-role="viewer">
+
+    <asq-settings max-num-submissions="-1" slideflow="ctrl" assessment="none"></asq-settings>
+
+    <asq-canvas></asq-canvas>
+
+    <div id="uni-logo-holder">
+      <img id="uni-logo" src="img/logo_info_color_en.svg" alt="University logo"/>
+    </div>
+
+    <div id="role-holder">
+      <div id="beamer-label">Beamer</div>
+      <div id="viewer-label">Viewer</div>
+    </div>
+
+    <div class="fallback-message">
+      <p>
+        Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.
+      </p>
+      <p>
+        For the best experience please use the latest <b>Chrome</b>
+      </p>
+    </div>
+    <asq-settings max-num-submissions="2" slideflow="ctrl" assessment="none"></asq-settings>
+    <div id="impress">
+
+      <section class="step text-center" id="intro" data-x="-1500" data-y="0">
+        <!-- <h2 class="pastel-blue">ASQ</h2> -->
+        <!-- <img src="img/ASQLogoBlack.png" height="100" alt="ASQ Logo"> -->
+        <div id="asq-logo">
+          <img class="anim a" src="svg/a.svg">
+          <img class="anim backfacing a" src="svg/a.svg">
+          <img class="anim s" src="svg/s.svg">
+          <img class="anim backfacing s" src="svg/s.svg">
+          <img class="anim q" src="svg/q.svg">
+          <img class="anim backfacing q" src="svg/q.svg">
+        </div>
+        <h4 id="presentationTitle" class="pastel-blue no-shadow">Making classroom lectures interactive</h4>
+        <p class="small" style="margin-top:1em;"><!-- <em class='grey'>Vasileios Triglianos</em> -->
+          <a href="mailto:vasileios.triglianos@usi.ch">vasileios.triglianos@usi.ch</a>
+          <img src="svg/twitter.svg" style="height:30px; position:relative; top:4px;" alt="twitter-logo"><a href="https://twitter.com/asqjs">@asqjs</a> <br>
+        </p>
+        <asq-welcome></asq-welcome>
+      </section>
+
+      <section class="step" id="normal" data-x="0" data-y="0">
+       <h2>The ASQ cycle</h2>
+       <div class="layout horizontal">
+        <div class="flex">
+          <img class="svg" src="svg/asq-cycle.svg" style="width:100%;">
+        </div>
+
+         <div class="flex">
+            <p class="substep">This is a good ol' slide. It has:</p>
+            <ul>
+             <li class="substep" style="margin-bottom: 0.4em;">a title</li>
+             <li class="substep" style="margin-bottom: 0.4em;">normat text</li>
+             <li class="substep" style="margin-bottom: 0.4em;">a list</li>
+             <li class="substep" style="margin-bottom: 0.4em;">an image and ...</li>
+             <li class="substep" style="background:yellow;margin-bottom: 0.4em;">a question!</li>
+           </ul>
+           <asq-exercise class="substep">
+            <asq-multi-choice-q>
+              <asq-stem>Would you like to do this in your presentations?</asq-stem>
+                <asq-option name="yes" correct>Yes</asq-option>
+                <asq-option name="no">No</asq-option>
+            </asq-multi-choice-q>
+           </asq-exercise>
+         </div>
+      </div>
+      </section>
+
+       <section class="step" id="asq-multi-choice-q" data-x="1500" data-y="0" data-z="1000">
+        <asq-exercise max-num-submissions="-1" assessment="self"> 
+          <asq-stem><h2>&lt;asq-multi-choice-q&gt; question</h2></asq-stem>
+          <asq-multi-choice-q selected="op3">
+            <asq-stem><h3>Here you can pick just one answer:</h3></asq-stem>
+            <asq-option name="op0">Option 0</asq-option>
+            <asq-option name="op1">Option 1</asq-option>
+            <asq-option name="op2">Option 2</asq-option>
+            <asq-option name="op3">Option 3</asq-option>
+          </asq-multi-choice-q>
+          <asq-multi-choice-q selected-values='["op1", "op2"]' multi>
+            <asq-stem><h3>Here you can pick as many as you want</h3></asq-stem>
+            <asq-option name="op0">Option 0</asq-option>
+            <asq-option name="op1">Option 1</asq-option>
+            <asq-option name="op2">Option 2</asq-option>
+            <asq-option name="op3">Option 3</asq-option>
+          </asq-multi-choice-q>
+        </asq-exercise>
+      </section>
+
+     <section class="step" id="asq-text-input-q" data-x="3000" data-y="0" data-z="1000">
+        <asq-exercise max-num-submissions="8">
+          <asq-text-input-q label="value" id="text-q">
+            <asq-stem><h5>What's the value of a[3]?</h5></asq-stem>
+            <pre><code>
+              char a[27];
+              char *b = "abc";
+              strcpy(a, b);</code></pre>
+            <asq-solution hidden>\0</asq-solution>
+          </asq-text-input-q>
+       </asq-exercise>
+      </section>
+
+      <section class="step" id="asq-text-input-q-stats" data-x="4500" data-y="0" data-z="2000">
+           <asq-text-input-q-stats for="text-q">
+           <h3>This page shows stats for the previous &lt;asq-text-input-q&gt; question</h3>
+           </asq-text-input-q-stats>
+       </section>
+
+       <section class="step" id="asq-highlight-q" data-x="6000" data-y="0" data-z="1000">
+          <asq-exercise max-num-submissions="-1">
+            <asq-highlight-q  theme="textmate" mode="java" font-size="0.65em">
+            <asq-solution>{"d9534f":[{"start":{"row":1,"column":2},"end":{"row":1,"column":8},"id":216},{"start":{"row":0,"column":0},"end":{"row":0,"column":6},"id":222}],"428bca":[{"start":{"row":2,"column":4},"end":{"row":2,"column":7},"id":229}],"f0ad4e":[{"start":{"row":0,"column":7},"end":{"row":0,"column":12},"id":236},{"start":{"row":1,"column":9},"end":{"row":1,"column":13},"id":243},{"start":{"row":2,"column":22},"end":{"row":2,"column":25},"id":250},{"start":{"row":2,"column":35},"end":{"row":2,"column":38},"id":256}]}</asq-solution>
+              <asq-stem><h3>Highlight with the appropriate color the following:</h3></asq-stem>
+              <asq-hl-color-task color="d9534f">Visibility Modifiers</asq-hl-color-task>
+                <asq-hl-color-task color="428bca">Variable Declarations</asq-hl-color-task>
+                <asq-hl-color-task color="f0ad4e">Other keywords</asq-hl-color-task>
+    <code>public class C {      
+  public void m() {
+    int i = i + 5 + ((int)5.0) + ((int)5f);
+  }
+}</code>
+            </asq-highlight-q>
+       </asq-exercise>
+      </section>
+
+      <section class="step" id="asq-js-function-body" data-x="7500" data-y="0" data-z="1000">
+        <asq-exercise max-num-submissions="1">
+          <asq-js-function-body-q function-name="wrap(str, tagName)" test-exp="wrap('hello World', 'div');">
+            <asq-stem><h4>Implement a function that wraps a given string with an HTML tag:</h4></asq-stem>
+          </asq-js-function-body-q>
+       </asq-exercise>
+      </section> 
+
+    <section class="step" id="asq-buckets-q" data-x="9000" data-y="0" data-z="1000">
+      <asq-exercise class="container">
+        <asq-stem><h4>Drag the labels (name of cites) to match the buckets.</h4></asq-stem>
+        <asq-buckets-q role="viewer"
+          mode="1-3" 
+          x-matchable="div[buckets]" 
+          y-matchable="div[labels]" 
+          attr-for-matched="s-name"
+          matched-attribute="matched"
+          matched-class="label-success">
+
+          <div buckets>
+            <div s-name="Europe" class="bucket"><b>Europe</b></div>
+            <div s-name="North America" class="bucket"><b>North America</b></div>
+            <div s-name="Middle East" class="bucket"><b>Middle East</b></div>
+          </div>
+          
+          <div labels>
+            <div s-name="New York"  class="label label-primary">New York</div>
+            <div s-name="London"  class="label label-primary">London</div>
+            <div s-name="Zurich"  class="label label-primary">Zurich</div>
+            <div s-name="Jerusalem"  class="label label-primary">Jerusalem</div>
+            <div s-name="Chicago"  class="label label-primary">Chicago</div>
+            <div s-name="Lugano"  class="label label-primary">Lugano</div>
+          </div>
+        </asq-buckets-q>
+      </section>
+
+
+      <section class="step" id="asq-order-q" data-x="10500" data-y="0" data-z="1000">
+        <asq-exercise>
+          <asq-stem>Specify the order of Polymer lifecycle methods.</asq-stem>
+          <asq-order-q sortable="[label]">
+            <div label class="static" name="ready">ready</div>
+            <div label class="static" name="attached">attached</div>
+            <div label class="static" name="created">created</div>
+            <div label class="static" name="detached">detached</div>
+          </asq-order-q>
+       </asq-exercise>
+      </section>
+
+
+       <section class="step" id="asq-code-q" data-x="12000" data-y="0" data-z="1000">
+         <asq-exercise max-num-submissions="3" assessment="self">
+             <asq-code-q  theme="monokai" mode="javascript" font-size="0.8em">
+               <asq-stem><h3>Write a simple for loop in JavaScript </h3></asq-stem>
+<code>public class C {      
+  public void m() {
+    int i = i + 5 + ((int)5.0) + ((int)5f);
+  }
+}</code>
+             </asq-code-q>
+        </asq-exercise>
+       </section>
+      
+      <section class="step" id="asq-css-select-q" data-x="13500" data-y="0" data-z="1000">
+         <asq-exercise>
+           <asq-css-select-q htmlcode="<ul><li class='aclass'><ul id='aid'><li></li><li></li></ul></li><div><p></p><p class='bclass'></p></div></li></ul>">
+             <asq-stem><h3>Select all 'li' elements:</h3></asq-stem>
+           </asq-css-select-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step fullscreen" id="asq-fiddle-q" data-x="15000" data-y="0" data-z="1000">
+        <asq-exercise max-num-submissions="-1">
+          <asq-fiddle-q>
+            <asq-stem>
+              <h4>Try to recreate the following image using HTML5 and CSS</h4>
+            <asq-stem>
+            <img src="img/mockup.png" width="200px" alt="">
+          </asq-fiddle-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="asq-sqlite-q" data-x="16500" data-y="0" data-z="1000">
+        <asq-exercise max-num-submissions="-1">
+            <asq-sqlite-q db-url="assets/Chinook_Sqlite.sqlite" font-size="0.6em">
+              <asq-stem><h4>INSERT some valid data in the TABLE `Employee`</h4></asq-stem>
+              <code></code>
+              <asq-solution>INSERT INTO `Employee` VALUES ()</asq-solution>
+            </asq-sqlite-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="asq-rating-q" data-x="18000" data-y="0" data-z="1000">
+         <asq-exercise max-num-submissions="-1">
+          <asq-rating-q type="stars">
+            <asq-stem><h4>An asq-rating-q question.</h4></asq-stem>
+            <asq-rating-item name="item-1">Item to rate #1</asq-rating-item>
+            <asq-rating-item name="item-2">Item to rate #2</asq-rating-item>
+            <asq-rating-item name="item-3">Item to rate #3</asq-rating-item>
+            <asq-rating-item name="item-4">Item to rate #4</asq-rating-item>
+          </asq-rating-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="asq-canvas" data-x="19500" data-y="0" data-z="1000">
+        <h3>This presentation has an &lt;asq-canvas&gt; element</h3>
+        <p>This element allows the presenter to start drawing by pressing `c` and then using their mouse. The drawing is then shared with the viewers.</p>
+      </section>
+
+    </div>
+    <div class="hint">
+      <p>
+        Use a spacebar or arrow keys to navigate
+      </p>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/svg-injector/dist/svg-injector.min.js"></script>
+    <script src="bower_components/asq-impress-js/js/impress.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+
+    $(function(){
+      var total = $('.step:not(#overview)').filter('.step[data-support!="true"]').length;
+      $(document).on('impress:stepenter', function(e) {
+        if (e.target.id == 'overview'){
+          $('#progress').css('width', '0%');
+          return;
+        }
+
+        if (e.target.dataset.support == 'true') return;
+
+        var index = $(e.target).index() + 1
+          , perc = index/total * 100;
+        $('#progress').css('width', perc + '%')
+        $('#progress').css('background', $('.pastel-blue').css('color'));
+      });
+    });
+    </script>
+
+  </body>
+</html>
+
