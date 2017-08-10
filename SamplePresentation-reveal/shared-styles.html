@@ -19,7 +19,7 @@
       --asq-option-viewer-unchecked-background-color: #D7CCC8;
     }
 
-    
+
 
     asq-multi-choice-q[multi] > asq-option {
       --asq-option-viewer-unchecked-ink-color: #FF1744;
@@ -61,7 +61,7 @@
       @apply(--layout-vertical);
       min-width: 200px;
       min-height: 200px;
-      
+
       border: 1px solid grey;
       margin: 1px;
 
@@ -148,7 +148,7 @@
     asq-buckets-q div.label.label-success {
       color: #fff;
       background-color: #5cb85c;
-      border-color: #4cae4c; 
+      border-color: #4cae4c;
     }
 
     asq-buckets-q div.label.label-success:focus,
@@ -243,7 +243,16 @@
       cursor: auto;
     }
 
+    asq-canvas{
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index: 2;
+    }
 
-    </style> 
+
+    </style>
   </template>
 </dom-module>

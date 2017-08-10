@@ -14,6 +14,8 @@
   ],
   "dependencies": {
     "asq-elements": "ASQ-USI-Elements/asq-elements#master",
-    "webcomponentsjs": "*"
+    "webcomponentsjs": "*",
+    "paper-icon-button": "polymerelements/paper-icon-button#^1.0.3",
+    "asq-canvas": "asq-usi-elements/asq-canvas#master"
   }
 }
