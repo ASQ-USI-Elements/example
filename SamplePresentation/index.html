@@ -12,9 +12,9 @@
 
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
 
-    <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>    
+    <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>
 
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> 
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <!-- Use shadow dom -->
     <script>
       window.Polymer = window.Polymer || {};
@@ -28,7 +28,7 @@
 
     <link rel="import" href="shared-styles.html">
     <style is="custom-style" include="shared-styles"></style>
-    
+
   </head>
 
   <body class="impress-not-supported" data-asq-role="viewer">
@@ -54,7 +54,7 @@
       </section>
 
        <section class="step" id="asq-multi-choice-q" data-x="1500" data-y="0" data-z="1000">
-        <asq-exercise max-num-submissions="-1" assessment="self"> 
+        <asq-exercise max-num-submissions="-1" assessment="self">
           <asq-stem><h2>&lt;asq-multi-choice-q&gt; question</h2></asq-stem>
           <asq-multi-choice-q selected="op3">
             <asq-stem><h3>Here you can pick just one answer:</h3></asq-stem>
@@ -106,14 +106,14 @@
             <asq-stem><h4>Implement a function that wraps a given string with an HTML tag:</h4></asq-stem>
           </asq-js-function-body-q>
        </asq-exercise>
-      </section> 
+      </section>
 
     <section class="step" id="asq-buckets-q" data-x="9000" data-y="0" data-z="1000">
       <asq-exercise class="container">
         <asq-buckets-q role="viewer"
-          mode="1-3" 
-          x-matchable="div[buckets]" 
-          y-matchable="div[labels]" 
+          mode="1-3"
+          x-matchable="div[buckets]"
+          y-matchable="div[labels]"
           attr-for-matched="s-name"
           matched-attribute="matched"
           matched-class="label-success">
@@ -124,7 +124,7 @@
             <div s-name="North America" class="bucket"><b>North America</b></div>
             <div s-name="Middle East" class="bucket"><b>Middle East</b></div>
           </div>
-          
+
           <div labels>
             <div s-name="New York"  class="label label-primary">New York</div>
             <div s-name="London"  class="label label-primary">London</div>
@@ -154,7 +154,7 @@
          <asq-exercise max-num-submissions="3" assessment="self">
              <asq-code-q  theme="monokai" mode="javascript" font-size="0.8em">
                <asq-stem><h3>Write a simple for loop in JavaScript </h3></asq-stem>
-<code>public class C {      
+<code>public class C {
   public void m() {
     int i = i + 5 + ((int)5.0) + ((int)5f);
   }
@@ -162,7 +162,7 @@
              </asq-code-q>
         </asq-exercise>
        </section>
-      
+
       <section class="step" id="asq-highlight-q" data-x="13500" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="-1">
             <asq-highlight-q  theme="textmate" mode="java" font-size="0.65em">
@@ -171,7 +171,7 @@
               <asq-hl-color-task color="d9534f">Visibility Modifiers</asq-hl-color-task>
                 <asq-hl-color-task color="428bca">Variable Declarations</asq-hl-color-task>
                 <asq-hl-color-task color="f0ad4e">Other keywords</asq-hl-color-task>
-    <code>public class C {      
+    <code>public class C {
   public void m() {
     int i = i + 5 + ((int)5.0) + ((int)5f);
   }
@@ -230,7 +230,7 @@
       window.addEventListener('polymer-ready', function() {
         init();
       });
-      
+
     })();
 		if ("ontouchstart" in document.documentElement) {
 			document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
@@ -242,4 +242,3 @@
 
   </body>
 </html>
-
