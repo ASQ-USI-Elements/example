@@ -31,7 +31,9 @@ html {
 .reveal.overview,
 .fork-reveal,
 .share-reveal,
-.state-background {
+.state-background,
+asq-canvas::shadow asq-canvas-presenter::shadow #drawingTools,
+asq-exercise > *::shadow *::shadow #statsToggle {
 	display: none !important;
 }
 
@@ -157,4 +159,3 @@ ul, ol, div, p {
 	position: absolute;
 	font-size: 14px;
 }
-
