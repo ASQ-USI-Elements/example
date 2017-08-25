@@ -32,7 +32,7 @@ html {
 .fork-reveal,
 .share-reveal,
 .state-background,
-asq-canvas::shadow asq-canvas-presenter::shadow #drawingTools {
+asq-canvas::shadow asq-canvas-presenter::shadow #menu {
 	display: none !important;
 }
 
@@ -72,12 +72,6 @@ h1, h2, h3, h4, h5, h6 {
 	        perspective-origin: 50% 50%;
 }
 
-/*@media print {
-  .reveal .slides section {
-		height: 700px !important;
-  }
-}*/
-
 @page {
   margin: 0 !important;
 	padding: 0 !important;
@@ -86,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 .reveal .slides section {
 	position: relative !important;
 	top: 0 !important;
-	left: 0 !important;\
+	left: 0 !important;
 	margin: 0 auto !important;
 	padding: 20px 0 !important;
 	visibility: visible !important;
