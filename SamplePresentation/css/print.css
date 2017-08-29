@@ -1,0 +1,112 @@
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+	margin: 0 auto !important;
+  width: 1056px;
+  height: 792px;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+asq-canvas::shadow asq-canvas-presenter::shadow #menu,
+#welcome {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+#impress {
+  position: static;
+  width: 100%;
+  height: auto;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  overflow: visible;
+  /*display: block;*/
+
+  -webkit-perspective: none;
+     -moz-perspective: none;
+      -ms-perspective: none;
+          perspective: none;
+
+  -webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+     -moz-perspective-origin: 50% 50%;
+      -ms-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+}
+
+@page {
+  margin: 0 !important;
+	padding: 0 !important;
+}
+
+#impress > * {
+	position: relative !important;
+	top: 0 !important;
+	left: 0 !important;
+	margin: 0 auto !important;
+	padding: 20px 0 !important;
+	visibility: visible !important;
+	display: block !important;
+	line-height: 1.3 !important;
+
+	box-sizing: border-box !important;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+#impress .slideDiv, .slideDiv {
+	page-break-after: always !important;
+	display: flex !important;
+	align-items: center;
+	position: relative !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden;
+}
+
+.slideDiv > .step {
+	margin: 0 auto;
+}
+
+canvas {
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index: 1;
+}
+
+@media print{
+	@page {
+			size: landscape;
+			margin: 0;
+		}
+	}

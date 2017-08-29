@@ -87,6 +87,7 @@ body {
 .step {
     position: relative;
     width: 960px;
+    height: 720px; /*  specify the height for dynamically added slides */
     padding: 40px;
     margin: 20px auto;
 

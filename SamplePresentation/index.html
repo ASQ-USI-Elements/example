@@ -29,6 +29,17 @@
     <link rel="import" href="shared-styles.html">
     <style is="custom-style" include="shared-styles"></style>
 
+    <!-- Printing and PDF exports -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
   </head>
 
   <body class="impress-not-supported" data-asq-role="viewer">
@@ -43,7 +54,7 @@
         For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
       </p>
     </div>
-    <asq-settings max-num-submissions="2" slideflow="ctrl" assessment="none"></asq-settings>
+    <asq-settings direct-update="true" max-num-submissions="2" slideflow="ctrl" assessment="none"></asq-settings>
     <div id="impress">
 
       <section class="step" id="intro" data-x="0" data-y="0">
@@ -238,7 +249,18 @@
     </script>
 		<script src="js/jquery.js"></script>
     <script src="js/impress.js"></script>
-    <script>impress().init()</script>
+    <script>
+    if (!window.location.search.match(/print-pdf/gi)) {
+      if (impress) {
+        try{
+          impress().init();
+        }
+        catch (e) {
+          //no impress maybe we are in ASQ
+        }
+      }
+    }
+    </script>
 
   </body>
 </html>
