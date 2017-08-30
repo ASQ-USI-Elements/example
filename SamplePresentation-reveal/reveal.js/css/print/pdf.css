@@ -154,7 +154,27 @@ h1, h2, h3, h4, h5, h6 {
 
 .slideDiv {
 	page-break-after: always !important;
-	display: flex;
+	display: flex !important;
 	align-items: center;
-	position: relative;
+	position: relative !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden;
+	height: 770px !important;
 }
+
+canvas {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+
+@media print{
+	@page {
+			size: landscape;
+			margin: 0 !important;
+		}
+	}
