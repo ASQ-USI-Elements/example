@@ -25,6 +25,6 @@
     "asq-elements": "ASQ-USI-Elements/asq-elements#master",
     "webcomponentsjs": "*",
     "paper-icon-button": "polymerelements/paper-icon-button#^1.0.3",
-    "asq-canvas": "asq-usi-elements/asq-canvas#master"
+    "asq-canvas": "asq-usi-elements/asq-canvas#master",
   }
 }

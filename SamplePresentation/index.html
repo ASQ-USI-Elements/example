@@ -73,7 +73,21 @@
         </asq-exercise>
       </section>
 
-     <section class="step" id="asq-text-input-q" data-x="3000" data-y="0" data-z="1000">
+     <section class="step" id="asq-multi-choice-q-other" data-x="3000" data-y="0" data-z="1000">
+      <asq-exercise max-num-submissions="-1" assessment="self"> 
+        <asq-stem><h2>&lt;asq-multi-choice-q&gt; question with "other" option</h2></asq-stem>
+        <asq-multi-choice-q>
+          <asq-stem>What is your favorite Ramones song?</asq-stem>
+          <asq-option name="a">Blitzkrieg Bop</asq-option>
+          <asq-option name="b">Pet Sematary</asq-option>
+          <asq-option name="cs">Sheena is a Punk Rocker</asq-option>
+          <asq-option name="d">I don't know I just wear the t-shirt because it looks cool</asq-option>
+          <asq-option is-other name="other">Other</asq-option>
+        </asq-multi-choice-q> 
+      </asq-exercise>
+    </section>
+
+     <section class="step" id="asq-text-input-q" data-x="4500" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="8" confidence>
           <asq-text-input-q label="value" id="text-q">
             <asq-stem><h5>What's value of a[3]?</h5></asq-stem>
@@ -86,13 +100,13 @@
        </asq-exercise>
       </section>
 
-      <section class="step" id="asq-text-input-q-stats" data-x="4500" data-y="0" data-z="2000">
+      <section class="step" id="asq-text-input-q-stats" data-x="6000" data-y="0" data-z="2000">
            <asq-text-input-q-stats for="text-q">
            <h3>This page shows stats for the previous &lt;asq-text-input-q&gt; question</h3>
            </asq-text-input-q-stats>
        </section>
 
-       <section class="step" id="asq-css-select-q" data-x="6000" data-y="0" data-z="1000">
+       <section class="step" id="asq-css-select-q" data-x="7500" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="9">
           <asq-css-select-q htmlcode="<ul><li class='aclass'><ul id='aid'><li></li><li></li></ul></li><div><p></p><p class='bclass'></p></div></li></ul>">
             <asq-stem><h3>Select all 'li' elements:</h3></asq-stem>
@@ -100,7 +114,7 @@
        </asq-exercise>
       </section>
 
-      <section class="step" id="asq-js-function-body" data-x="7500" data-y="0" data-z="1000">
+      <section class="step" id="asq-js-function-body" data-x="9000" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="1">
           <asq-js-function-body-q function-name="wrap(str, tagName)" test-exp="wrap('hello World', 'div');">
             <asq-stem><h4>Implement a function that wraps a given string with an HTML tag:</h4></asq-stem>
@@ -108,7 +122,7 @@
        </asq-exercise>
       </section> 
 
-    <section class="step" id="asq-buckets-q" data-x="9000" data-y="0" data-z="1000">
+    <section class="step" id="asq-buckets-q" data-x="10500" data-y="0" data-z="1000">
       <asq-exercise class="container">
         <asq-buckets-q role="viewer"
           mode="1-3" 
@@ -137,7 +151,7 @@
       </section>
 
 
-      <section class="step" id="asq-order-q" data-x="10500" data-y="0" data-z="1000">
+      <section class="step" id="asq-order-q" data-x="12000" data-y="0" data-z="1000">
         <asq-exercise>
           <asq-order-q sortable="[label]">
             <asq-stem>Specify the order of Polymer lifecycle methods.</asq-stem>
@@ -150,7 +164,7 @@
       </section>
 
 
-       <section class="step" id="asq-code-q" data-x="12000" data-y="0" data-z="1000">
+       <section class="step" id="asq-code-q" data-x="13500" data-y="0" data-z="1000">
          <asq-exercise max-num-submissions="3" assessment="self">
              <asq-code-q  theme="monokai" mode="javascript" font-size="0.8em">
                <asq-stem><h3>Write a simple for loop in JavaScript </h3></asq-stem>
@@ -163,7 +177,7 @@
         </asq-exercise>
        </section>
       
-      <section class="step" id="asq-highlight-q" data-x="13500" data-y="0" data-z="1000">
+      <section class="step" id="asq-highlight-q" data-x="15000" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="-1">
             <asq-highlight-q  theme="textmate" mode="java" font-size="0.65em">
             <asq-solution>{"d9534f":[{"start":{"row":1,"column":2},"end":{"row":1,"column":8},"id":216},{"start":{"row":0,"column":0},"end":{"row":0,"column":6},"id":222}],"428bca":[{"start":{"row":2,"column":4},"end":{"row":2,"column":7},"id":229}],"f0ad4e":[{"start":{"row":0,"column":7},"end":{"row":0,"column":12},"id":236},{"start":{"row":1,"column":9},"end":{"row":1,"column":13},"id":243},{"start":{"row":2,"column":22},"end":{"row":2,"column":25},"id":250},{"start":{"row":2,"column":35},"end":{"row":2,"column":38},"id":256}]}</asq-solution>
@@ -180,7 +194,7 @@
        </asq-exercise>
       </section>
 
-      <section class="step fullscreen" id="asq-fiddle-q" data-x="15000" data-y="0" data-z="1000">
+      <section class="step fullscreen" id="asq-fiddle-q" data-x="16500" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="-1">
           <asq-fiddle-q>
             <asq-stem>
@@ -191,7 +205,7 @@
         </asq-exercise>
       </section>
 
-      <section class="step" id="asq-sqlite-q" data-x="16500" data-y="0" data-z="1000">
+      <section class="step" id="asq-sqlite-q" data-x="18000" data-y="0" data-z="1000">
         <asq-exercise max-num-submissions="-1">
             <asq-sqlite-q db-url="assets/Chinook_Sqlite.sqlite" font-size="0.6em">
               <asq-stem><h4>INSERT some valid data in the TABLE `Employee`</h4></asq-stem>
@@ -201,7 +215,7 @@
         </asq-exercise>
       </section>
 
-      <section class="step" id="asq-rating-q" data-x="18000" data-y="0" data-z="1000">
+      <section class="step" id="asq-rating-q" data-x="19500" data-y="0" data-z="1000">
          <asq-exercise max-num-submissions="-1">
           <asq-rating-q type="stars">
             <asq-stem><h4>An asq-rating-q question.</h4></asq-stem>
@@ -213,7 +227,7 @@
         </asq-exercise>
       </section>
 
-      <section class="step" id="asq-canvas" data-x="19500" data-y="0" data-z="1000">
+      <section class="step" id="asq-canvas" data-x="21000" data-y="0" data-z="1000">
         <h3>This presentation has an &lt;asq-canvas&gt; element</h3>
         <p>This element allows the presenter to start drawing by pressing `c` and then using their mouse. The drawing is then shared with the viewers.</p>
       </section>
@@ -238,7 +252,14 @@
     </script>
 		<script src="js/jquery.js"></script>
     <script src="js/impress.js"></script>
-    <script>impress().init()</script>
+    <script>
+      // if we're not in print mode start impress
+  if ( window.location.search.match(/print-pdf/) ) {
+    window.print()
+  }else{
+     impress().init()
+  }
+  </script>
 
   </body>
 </html>
