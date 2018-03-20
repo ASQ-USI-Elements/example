@@ -24,6 +24,7 @@
     <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
     <link rel="import" href="bower_components/asq-elements/asq-elements.html">
     <link rel="import" href="bower_components/asq-canvas/asq-canvas.html">
+    <link rel="import" href="bower_components/asq-diagram-q/asq-diagram-q.html">
     <link rel="import" href="n-fullscreen-impress-steps.html">
 
     <link rel="import" href="shared-styles.html">
@@ -227,7 +228,15 @@
         </asq-exercise>
       </section>
 
-      <section class="step" id="asq-canvas" data-x="21000" data-y="0" data-z="1000">
+      <section class="step" id="asq-diagram-q" data-x="21000" data-y="0" data-z="1000">
+        <asq-exercise  max-num-submissions="-1">
+          <asq-diagram-q id="asq-diagram-q" name="diagram0" type="bpmn" width="600" height="400">
+            <asq-stem>An asq-diagram-q question</asq-stem>
+          </asq-diagram-q>
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="asq-canvas" data-x="22500" data-y="0" data-z="1000">
         <h3>This presentation has an &lt;asq-canvas&gt; element</h3>
         <p>This element allows the presenter to start drawing by pressing `c` and then using their mouse. The drawing is then shared with the viewers.</p>
       </section>
